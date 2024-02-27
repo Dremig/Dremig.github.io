@@ -252,19 +252,105 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><del>无意义的字段</del></p>
+        <p><s>无意义的字段</s></p>
 <span id="more"></span>
-<p>曾几何时，我一直梦想有自己的一个网页，可以在上面肆意玩耍（不是），然后我终于实现了。<br>很离谱的开场白啊。<br>那么大家好，这里是Dremig，这篇文章会大致讲一下利用hexo+github框架搭建个人博客网站的方法与我部署时出现的问题解决经验。如果还有疑惑的地方，欢迎在评论区讨论。<br>参照的文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细）</a><br><strong>感谢枫叶大佬！</strong><br><strong>以及，PAY ATTENTION！</strong><br>本文会包含一些内容的补充，即<strong>补充</strong>标签，没有兴趣或没有时间的可以跳过，不影响博客配置整个过程。</p>
-<h2 id="从零开始的博客搭建（hexo-github框架）"><a href="#从零开始的博客搭建（hexo-github框架）" class="headerlink" title="从零开始的博客搭建（hexo+github框架）"></a>从零开始的博客搭建（hexo+github框架）</h2><h3 id="github的进入与注册"><a href="#github的进入与注册" class="headerlink" title="github的进入与注册"></a>github的进入与注册</h3><p>首先我们需要在github这一学术网站上注册账号，后续我们也需要对这一账号与个人网站进行关联。<br>这里就不得不提出<strong>经验1</strong>了，如何不翻墙进入github?<br>你的github会不会时而能进，时而在打转大半天后”time out”?倘若你进行一次加速会好很多。<br>如果你想测试自己能不能进github，可以在cmd里用<code>ping www.github.com</code>测试。如果timed out就是不行的。<br>在hosts文件末尾添加以下语句（仅windows系统）：<br><code>140.82.114.4	github.com</code><br><code>199.232.5.194	github.global.ssl.fastly.net</code><br>windows系统hosts文件位置:C:\Windows\System32\drivers\etc<br>Mac OS系统:&#x2F;etc&#x2F;<br>Linux及其它类Unix系统:&#x2F;etc&#x2F;<br>Android系统:&#x2F;system&#x2F;etc&#x2F;<br><strong>注意，修改时需要管理员权限！</strong><br><strong>补充</strong>：hosts文件的作用</p>
+<p>曾几何时，我一直梦想有自己的一个网页，可以在上面肆意玩耍（不是），然后我终于实现了。<br>
+很离谱的开场白啊。<br>
+那么大家好，这里是Dremig，这篇文章会大致讲一下利用hexo+github框架搭建个人博客网站的方法与我部署时出现的问题解决经验。如果还有疑惑的地方，欢迎在评论区讨论。<br>
+参照的文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细）</a><br>
+<strong>感谢枫叶大佬！</strong><br>
+<strong>以及，PAY ATTENTION！</strong><br>
+本文会包含一些内容的补充，即<strong>补充</strong>标签，没有兴趣或没有时间的可以跳过，不影响博客配置整个过程。</p>
+<h2 id="从零开始的博客搭建（hexo-github框架）">从零开始的博客搭建（hexo+github框架）</h2>
+<h3 id="github的进入与注册">github的进入与注册</h3>
+<p>首先我们需要在github这一学术网站上注册账号，后续我们也需要对这一账号与个人网站进行关联。<br>
+这里就不得不提出<strong>经验1</strong>了，如何不翻墙进入github?<br>
+你的github会不会时而能进，时而在打转大半天后&quot;time out&quot;?倘若你进行一次加速会好很多。<br>
+如果你想测试自己能不能进github，可以在cmd里用<code>ping www.github.com</code>测试。如果timed out就是不行的。<br>
+在hosts文件末尾添加以下语句（仅windows系统）：<br>
+<code>140.82.114.4	github.com</code><br>
+<code>199.232.5.194	github.global.ssl.fastly.net</code><br>
+windows系统hosts文件位置:C:\Windows\System32\drivers\etc<br>
+Mac OS系统:/etc/<br>
+Linux及其它类Unix系统:/etc/<br>
+Android系统:/system/etc/<br>
+<strong>注意，修改时需要管理员权限！</strong><br>
+<strong>补充</strong>：hosts文件的作用</p>
 <ul>
 <li>加快域名解析</li>
 <li>构建映射关系</li>
 <li>屏蔽网站或广告</li>
 <li>调试、测试</li>
 </ul>
-<p>进入github，点击右上角sign up进行注册<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/image.png" alt="alt text"><br>应该是需要绑定邮箱的，亲测qq邮箱可以使用。<br><del>后续不表</del></p>
-<h3 id="git的下载"><a href="#git的下载" class="headerlink" title="git的下载"></a>git的下载</h3><p>进入<a target="_blank" rel="noopener" href="https://git-scm.com/download">git官网</a><br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20003110.png" alt="alt text"><br>依照自己电脑的系统选择合适的下载就可以啦。<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20003538.png" alt="alt text"><br><strong>注意点击去后要选setup，不然下载了什么都不知道。而且注意自己电脑是几位的（64bit安装32bit没问题，32bit安装64bit有问题的）</strong><br>然后点击下载得到的<strong>Git-2.43.0-64-bit.exe</strong>（我下载得到的叫这个来着）<br>依次得到以下页面：<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004011.png" alt="alt text"><br>起始页面，直接点击next<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004053.png" alt="alt text"><br>可以点选<strong>Additional icons</strong>那个选项添加快捷方式（桌面图标），这是默认不选的，其他尽量不要动，保持默认（主要是因为我也不清楚效果）<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004132.png" alt="alt text"><br>使用Vim编辑器，保持默认。<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004158.png" alt="alt text"><br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004211.png" alt="alt text"><br>这里的默认选取意思是不仅可以通过Git Bash操作，也可以通过cmd命令行操作，后续会用到这一点的。<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004229.png" alt="alt text"><br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004243.png" alt="alt text"><br>使用HTTPS传输后台，保持默认。<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004312.png" alt="alt text"><br>终端模拟器的配置，保持默认。<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004326.png" alt="alt text"><br>“git pull”命令用于从远程仓库（也就是我们的电脑）获取最新代码并合并到当前的分支里，<del>是好的</del>所以保持默认模式。<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004341.png" alt="alt text"><br>有总比没有好（雾）<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004357.png" alt="alt text"><br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/1.png" alt="alt text"><br><del>由于是第二次安装，所以好像乱序了（估计默认我只是修改而已）大家尽量按默认来（除了那个桌面图标的添加与否）</del><br>最后选择目录，安装……<br>安装成功，桌面鼠标右键显示：<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20032233.png" alt="alt text"><br>点击<strong>Open Git Bash here</strong>，显示如下页面：<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20032406.png" alt="alt text"><br>输入<strong>git</strong>，显示：<br><img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20032423.png" alt="alt text"><br>证明配置基本成功。<br>git是一个非常重要的工具，后续我也会出一个简要的教程，了解一下它的魅力~。</p>
-<h3 id="绑定github"><a href="#绑定github" class="headerlink" title="绑定github"></a>绑定github</h3><p>github本身是可以通过一个选项”add file”上传文件的，但是我亲测在不翻墙的情况下是非常慢的（乌龟.gif）<del>翻墙也慢，其实就是不好用，不想用（不是）</del><br>所以我们使用SSH（安全外壳协议）来实现数据的安全传输，关于其重要性可以参看这篇文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35246620/article/details/54317740">详述SSH原理及应用</a><br>首先我们<del>在D盘</del>新建一个文件夹，比如叫”git_codelife”。<br>我们在git里面进入这个文件夹，具体方法有两种，其一是可以直接在文件夹空白处右键点击<strong>Open Git Bash here</strong>，其二是在Git Bash里面输入<code>cd D:/git_codelife</code>(git对大小写不敏感，也就是每个字母大写小写，只要字母每个不输错，都能进入正确的文件夹。<code>cd</code>也是常见的命令行命令之一，用于进入对应的文件夹)<br>输入ssh，显示如下页面：<br>即已经安装ssh，我们输入<code>ssh-keygen -t rsa</code><strong>（空格！！！）</strong><br><strong>补充</strong><br><code>ssh-keygen [选项]</code>命令 用于为ssh生成、管理和转换认证密钥，它支持RSA和DSA两种认证密钥。<br>后缀选项可以跟随内容：<br>-b：指定密钥长度；<br>-e：读取openssh的私钥或者公钥文件；<br>-C：添加注释；<br>-f：指定用来保存密钥的文件名；<br>-i：读取未加密的ssh-v2兼容的私钥&#x2F;公钥文件，然后在标准输出设备上显示openssh兼容的私钥&#x2F;公钥；<br>-l：显示公钥文件的指纹数据；<br>-N：提供一个新密语；<br>-P：提供（旧）密语；<br>-q：静默模式；<br>-t：指定要创建的密钥类型。<br>这里我们的目的显然是生成rsa密钥，那一定会有小伙伴问了，rsa和dsa区别何在呢？<br>rsa与dsa都是加密算法，其中rsa为非对称加密，而dsa为对称加密。<br>那就不得不引出密钥的对称与非对称加密了！<br>密钥分为两种：对称密钥与非对称密钥<br><strong>对称密钥加密</strong>，又称私钥加密，即信息的发送方和接收方用一个密钥去加密和解密数据。它的最大优势是加&#x2F;解密速度快，适合于对大数据量进行加密，但密钥管理困难。<br><strong>非对称密钥加密系统</strong>，又称公钥密钥加密。它需要使用一对密钥来分别完成加密和解密操作，一个公开发布，即公开密钥，另一个由用户自己秘密保存，即私用密钥。信息发送者用公开密钥去加密，而信息接收者则用私用密钥去解密。公钥机制灵活，但加密和解密速度却比对称密钥加密慢得多。<br>（更深的内容，参见<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7615d036969f">公钥和私钥的完全解释（包括对称算法和非对称算法、RSA解释）</a>） </p>
+<p>进入github，点击右上角sign up进行注册<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/image.png" alt="alt text"><br>
+应该是需要绑定邮箱的，亲测qq邮箱可以使用。<br>
+<s>后续不表</s></p>
+<h3 id="git的下载">git的下载</h3>
+<p>进入<a target="_blank" rel="noopener" href="https://git-scm.com/download">git官网</a><br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20003110.png" alt="alt text"><br>
+依照自己电脑的系统选择合适的下载就可以啦。<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20003538.png" alt="alt text"><br>
+<strong>注意点击去后要选setup，不然下载了什么都不知道。而且注意自己电脑是几位的（64bit安装32bit没问题，32bit安装64bit有问题的）</strong><br>
+然后点击下载得到的<strong>Git-2.43.0-64-bit.exe</strong>（我下载得到的叫这个来着）<br>
+依次得到以下页面：<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004011.png" alt="alt text"><br>
+起始页面，直接点击next<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004053.png" alt="alt text"><br>
+可以点选<strong>Additional icons</strong>那个选项添加快捷方式（桌面图标），这是默认不选的，其他尽量不要动，保持默认（主要是因为我也不清楚效果）<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004132.png" alt="alt text"><br>
+使用Vim编辑器，保持默认。<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004158.png" alt="alt text"><br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004211.png" alt="alt text"><br>
+这里的默认选取意思是不仅可以通过Git Bash操作，也可以通过cmd命令行操作，后续会用到这一点的。<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004229.png" alt="alt text"><br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004243.png" alt="alt text"><br>
+使用HTTPS传输后台，保持默认。<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004312.png" alt="alt text"><br>
+终端模拟器的配置，保持默认。<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004326.png" alt="alt text"><br>
+&quot;git pull&quot;命令用于从远程仓库（也就是我们的电脑）获取最新代码并合并到当前的分支里，<s>是好的</s>所以保持默认模式。<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004341.png" alt="alt text"><br>
+有总比没有好（雾）<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20004357.png" alt="alt text"><br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/1.png" alt="alt text"><br>
+<s>由于是第二次安装，所以好像乱序了（估计默认我只是修改而已）大家尽量按默认来（除了那个桌面图标的添加与否）</s><br>
+最后选择目录，安装…<br>
+安装成功，桌面鼠标右键显示：<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20032233.png" alt="alt text"><br>
+点击<strong>Open Git Bash here</strong>，显示如下页面：<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20032406.png" alt="alt text"><br>
+输入<strong>git</strong>，显示：<br>
+<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-02-15%20032423.png" alt="alt text"><br>
+证明配置基本成功。<br>
+git是一个非常重要的工具，后续我也会出一个简要的教程，了解一下它的魅力~。</p>
+<h3 id="绑定github">绑定github</h3>
+<p>github本身是可以通过一个选项&quot;add file&quot;上传文件的，但是我亲测在不翻墙的情况下是非常慢的（乌龟.gif）<s>翻墙也慢，其实就是不好用，不想用（不是）</s><br>
+所以我们使用SSH（安全外壳协议）来实现数据的安全传输，关于其重要性可以参看这篇文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35246620/article/details/54317740">详述SSH原理及应用</a><br>
+首先我们<s>在D盘</s>新建一个文件夹，比如叫&quot;git_codelife&quot;。<br>
+我们在git里面进入这个文件夹，具体方法有两种，其一是可以直接在文件夹空白处右键点击<strong>Open Git Bash here</strong>，其二是在Git Bash里面输入<code>cd D:/git_codelife</code>(git对大小写不敏感，也就是每个字母大写小写，只要字母每个不输错，都能进入正确的文件夹。<code>cd</code>也是常见的命令行命令之一，用于进入对应的文件夹)<br>
+输入ssh，显示如下页面：<br>
+即已经安装ssh，我们输入<code>ssh-keygen -t rsa</code><strong>（空格！！！）</strong><br>
+<strong>补充</strong><br>
+<code>ssh-keygen [选项]</code>命令 用于为ssh生成、管理和转换认证密钥，它支持RSA和DSA两种认证密钥。<br>
+后缀选项可以跟随内容：<br>
+-b：指定密钥长度；<br>
+-e：读取openssh的私钥或者公钥文件；<br>
+-C：添加注释；<br>
+-f：指定用来保存密钥的文件名；<br>
+-i：读取未加密的ssh-v2兼容的私钥/公钥文件，然后在标准输出设备上显示openssh兼容的私钥/公钥；<br>
+-l：显示公钥文件的指纹数据；<br>
+-N：提供一个新密语；<br>
+-P：提供（旧）密语；<br>
+-q：静默模式；<br>
+-t：指定要创建的密钥类型。<br>
+这里我们的目的显然是生成rsa密钥，那一定会有小伙伴问了，rsa和dsa区别何在呢？<br>
+rsa与dsa都是加密算法，其中rsa为非对称加密，而dsa为对称加密。<br>
+那就不得不引出密钥的对称与非对称加密了！<br>
+密钥分为两种：对称密钥与非对称密钥<br>
+<strong>对称密钥加密</strong>，又称私钥加密，即信息的发送方和接收方用一个密钥去加密和解密数据。它的最大优势是加/解密速度快，适合于对大数据量进行加密，但密钥管理困难。<br>
+<strong>非对称密钥加密系统</strong>，又称公钥密钥加密。它需要使用一对密钥来分别完成加密和解密操作，一个公开发布，即公开密钥，另一个由用户自己秘密保存，即私用密钥。信息发送者用公开密钥去加密，而信息接收者则用私用密钥去解密。公钥机制灵活，但加密和解密速度却比对称密钥加密慢得多。<br>
+（更深的内容，参见<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7615d036969f">公钥和私钥的完全解释（包括对称算法和非对称算法、RSA解释）</a>）</p>
 
     </div>
 
@@ -428,12 +514,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">NaNm</span>
+    <span title="站点总字数">14k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">NaN:aN</span>
+    <span title="站点阅读时长">13 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

@@ -214,7 +214,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>7.1k</span>
+              <span>7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -233,12 +233,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><del>无意义的字段</del></p>
+        <p><s>无意义的字段</s></p>
 <span id="more"></span>
-<h3 id="第一章：算法在计算中的应用"><a href="#第一章：算法在计算中的应用" class="headerlink" title="第一章：算法在计算中的应用"></a>第一章：算法在计算中的应用</h3><h4 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h4><p><strong>算法的定义：任何良定义的计算过程。</strong>怎么理解这句话呢？很好理解，就是输入转化为输出的计算过程（草）。<br><strong>把算法看作是求解良说明的计算问题的工具。</strong>。这又怎么理解？意思就是算法是用于解决问题的计算过程。<br><strong>实例：输入的东西（如在排序中就是输入的数据，1 2 3 5 4什么的）。</strong><br><strong>正确的算法：输出是正确的。</strong>“正确”的也就是所谓“达到目的”的。<br>比较核心的话就是这些。算法可以是一个计算器，输入1+1返回2；也可以是一个脚本，帮你打通关一个单机小游戏。算法是实现计算问题的过程，而计算问题，则涵盖单纯的计算与复杂问题的求解<br>（这个作业略过了，不是有统一正确答案的）</p>
-<h4 id="作为一种技术的算法"><a href="#作为一种技术的算法" class="headerlink" title="作为一种技术的算法"></a>作为一种技术的算法</h4><p><strong>效率</strong>：也就是求解问题的速度。可以看一下给出的例子，强调效率的重要性（这谁不知道啊喂）我认为这里面提到的一点重要的就是<strong>lgn</strong>指的是<strong>log<del>2</del>n</strong>而不是该死的<strong>log<del>10</del>n</strong> …..<br><del>（阿里嘎多，不然我一直被蒙在鼓里）</del><br>纵使c<del>1</del>远大于c<del>2</del>，排序数据足够多时归并占优应该不难理解吧…..对数增长趋势本身就是趋缓的（鉴于指数爆炸），跟一次函数的增长速度显然没法比吧。</p>
-<p><strong>算法与其他技术</strong><br><del>过了，自己看看，没有什么知识性问题</del></p>
-<p>练习<br>1.2-2：运行步数越少越“优”，8n^2^与64nlgn取等是多少？也就是n&#x3D;8log<del>2</del>n,即2^n^ &#x3D; 256 * n。<br>这是一个超越方程，没有常规解法。注意到n为11，2^11^ &#x3D; 2048 &lt; 2816 &#x3D; 256 * 11,n为12 ,2^12^ &#x3D; 4096 &gt; 3072 &#x3D; 256 * 12.<br>这个临界n在11到12，显然输入的数据应该是整数，那就从1到11，插入排序占优；归并排序在n更大时占优。<br>1.2-3：运行时间越少越“快”，与上题同样的方法，二者去取等，算出来零点在14到15，所以n大于15前者更快。<br><strong>这两道题目偏基础，只是简单的数值计算。</strong></p>
+<h3 id="第一章：算法在计算中的应用">第一章：算法在计算中的应用</h3>
+<h4 id="算法">算法</h4>
+<p>**算法的定义：任何良定义的计算过程。**怎么理解这句话呢？很好理解，就是输入转化为输出的计算过程（草）。<br>
+<strong>把算法看作是求解良说明的计算问题的工具。</strong>。这又怎么理解？意思就是算法是用于解决问题的计算过程。<br>
+<strong>实例：输入的东西（如在排序中就是输入的数据，1 2 3 5 4什么的）。</strong><br>
+<strong>正确的算法：输出是正确的。</strong>“正确”的也就是所谓“达到目的”的。<br>
+比较核心的话就是这些。算法可以是一个计算器，输入1+1返回2；也可以是一个脚本，帮你打通关一个单机小游戏。算法是实现计算问题的过程，而计算问题，则涵盖单纯的计算与复杂问题的求解<br>
+（这个作业略过了，不是有统一正确答案的）</p>
+<h4 id="作为一种技术的算法">作为一种技术的算法</h4>
+<p><strong>效率</strong>：也就是求解问题的速度。可以看一下给出的例子，强调效率的重要性（这谁不知道啊喂）我认为这里面提到的一点重要的就是<strong>lgn</strong>指的是<strong>log~2~n</strong>而不是该死的<strong>log~10~n</strong> …<br>
+<s>（阿里嘎多，不然我一直被蒙在鼓里）</s><br>
+纵使c~1~远大于c~2~，排序数据足够多时归并占优应该不难理解吧…对数增长趋势本身就是趋缓的（鉴于指数爆炸），跟一次函数的增长速度显然没法比吧。</p>
+<p><strong>算法与其他技术</strong><br>
+<s>过了，自己看看，没有什么知识性问题</s></p>
+<p>练习<br>
+1.2-2：运行步数越少越“优”，8n^2^与64nlgn取等是多少？也就是n=8log~2~n,即2^n^ = 256 * n。<br>
+这是一个超越方程，没有常规解法。注意到n为11，2^11^ = 2048 &lt; 2816 = 256 * 11,n为12 ,2^12^ = 4096 &gt; 3072 = 256 * 12.<br>
+这个临界n在11到12，显然输入的数据应该是整数，那就从1到11，插入排序占优；归并排序在n更大时占优。<br>
+1.2-3：运行时间越少越“快”，与上题同样的方法，二者去取等，算出来零点在14到15，所以n大于15前者更快。<br>
+<strong>这两道题目偏基础，只是简单的数值计算。</strong></p>
 <p>思考题</p>
 <table>
 <thead>
@@ -253,7 +269,8 @@
 <th>1世纪</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>lgn</td>
 <td>2^1000^</td>
 <td></td>
@@ -333,33 +350,121 @@
 <td></td>
 <td></td>
 </tr>
-</tbody></table>
-<p><strong>byd一秒是1000毫秒，注意了</strong><br><strong>哇这个好无聊，又是计算，其实就是把f(n)&#x3D;t去求解，过了</strong></p>
-<h3 id="第二章：算法基础"><a href="#第二章：算法基础" class="headerlink" title="第二章：算法基础"></a>第二章：算法基础</h3><p>好了，那我们正式进入算法的学习内容。<br>开始的内容就是说书上都是伪代码（<del>这下看懂了√</del>）<br>我们最开始研究的问题是“排序问题”，也就是“输入a<del>1</del>,a<del>2</del>……a<del>n</del>，使其以b<del>1</del>&lt;b<del>2</del>&lt;b<del>3</del>….b<del>n-1</del>&lt;b<del>n</del>的形式输出”</p>
-<h4 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h4><p>很熟悉的名词吧，我们之前还讨论过这个方法，也知道它在小规模的排序处理上占优。<br><strong>算法思想</strong>：我认为扑克牌的思想是非常正确的，怎么去理解呢？<br>其实就是一个“挨个讨论”(<strong>遍历</strong>)的思想，你对输入的任何a<del>k</del>，针对其前面的k-1个数讨论，直到寻找到两个数，使a<del>b</del>&lt;a<del>k</del>&lt;a<del>b+1</del>，若你比任何一个前面的数都小，则放到第一个；同理最大的放最后一个。<br>为什么这个排序方法速度略显慢呢？可以看到，它不仅对每个数讨论，在讨论每个数时，还针对其前面的数<strong>挨个讨论</strong><del>，不慢我觉得有鬼</del>。<br><strong>C语言代码呈现</strong>：</p>
+</tbody>
+</table>
+<p><strong>byd一秒是1000毫秒，注意了</strong><br>
+<strong>哇这个好无聊，又是计算，其实就是把f(n)=t去求解，过了</strong></p>
+<h3 id="第二章：算法基础">第二章：算法基础</h3>
+<p>好了，那我们正式进入算法的学习内容。<br>
+开始的内容就是说书上都是伪代码（<s>这下看懂了√</s>）<br>
+我们最开始研究的问题是“排序问题”，也就是“输入a~1~,a~2~…a~n~，使其以b~1~&lt;b~2~&lt;b~3~…b~n-1~&lt;b~n~的形式输出”</p>
+<h4 id="插入排序">插入排序</h4>
+<p>很熟悉的名词吧，我们之前还讨论过这个方法，也知道它在小规模的排序处理上占优。<br>
+<strong>算法思想</strong>：我认为扑克牌的思想是非常正确的，怎么去理解呢？<br>
+其实就是一个“挨个讨论”(<strong>遍历</strong>)的思想，你对输入的任何a~k~，针对其前面的k-1个数讨论，直到寻找到两个数，使a~b~&lt;a~k~&lt;a~b+1~，若你比任何一个前面的数都小，则放到第一个；同理最大的放最后一个。<br>
+为什么这个排序方法速度略显慢呢？可以看到，它不仅对每个数讨论，在讨论每个数时，还针对其前面的数<strong>挨个讨论</strong><s>，不慢我觉得有鬼</s>。<br>
+<strong>C语言代码呈现</strong>：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()&#123;`</span><br><span class="line">    int n;//输入数的个数</span><br><span class="line">    scanf(&quot;%d&quot;, &amp;n);//可能有的C语言编译器不支持</span><br><span class="line">    int a[n]; `</span><br><span class="line">    for(int i = 0; i &lt; n; i++)&#123;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;a[i]);</span><br><span class="line">    &#125;`</span><br><span class="line">    for(int i = 1; i &lt; n; i++)&#123;</span><br><span class="line">        int j = i - 1;</span><br><span class="line">        int key = a[i];</span><br><span class="line">        while(j &gt;= 0 &amp;&amp; key &lt; a[j])&#123;</span><br><span class="line">            a[j+1] = a[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        a[j + 1] = key;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i = 0; i &lt; n; i++)&#123;</span><br><span class="line">        printf(&quot;%d\n&quot;, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>注意了，用其它数存储重要待定数值的思想非常重要（int key的那行）！可以看到，如果把所有的key都替换成a[i],输出结果就是错的。原因就是在下面两三行，马上a[i]位置就被取代了，后面用的a[i]就不是所谓你要讨论的值了！</strong></p>
-<p><strong>循环不变式与插入排序的正确性</strong><br><strong>循环不变式</strong>：在讨论第k个数时，前k-1个数的序列（该实例中）的<strong>性质</strong>。<br>意义：算法正确性。<br>性质：<br>1.初始化：循环的第一次迭代<strong>前</strong>，其为真。<br>2.保持：循环的某次迭代前其为真，则下一次迭代前其也为真。<br>3.终止：循环结束时，不变式提供一个有用的性质，性质有助于证明算法的正确性。<br><strong>（迭代：在每次循环时执行的过程，如排序是实现对应数值的排序）</strong><br>证明前两条性质正确，则每次迭代前循环不变式为真。<br>这和数学归纳法（n&#x3D;1正确，设n&#x3D;k时正确，证明n&#x3D;k+1时正确）很像（书上说是类似的）<br><em>帮助理解</em>：循环不变式描述属性与性质，而不是什么式子。其一直为真不代表算法就是正确的。如在插入排序中，利用不断执行插入过程来实现算法，但通过验证输出才得到算法的正确性。<br><strong>伪代码的约定</strong>:<br>1.缩进表示块结构：很好理解吧，独立开来了都。<br>2.循环与条件判断结构与高级语言有类似解释。<code>for x to y</code>从x正增加到y，downto表示相反过程。<br>3.<code>//</code>后紧跟注释（C：hello~）。<br>4.赋值与C类似，a &#x3D; x为x赋给a。<br>5.变量局部，不使用全局变量<br>6.a[i]表示第i个元素（因为下标从1开始），a[1..y]表示a[1]到a[y]的y个元素。<br>7.对象与属性（和C语言的结构体与面向对象的编程语言类似）讨论的东西称为对象，他的性质称为属性。若C为对象，length为属性，用C.length访问它。<br>8.按值将参数传递给过程：被调用过程接受的是其参数的<strong>副本</strong>而非参数<strong>本身</strong>.<br>9.return将控制权交还为块前，大部分return伴随值的传递（不一定只有一个哦）<br>10.and和or是短路的，意思就是先处理前面的，<code>x and y</code>若x为False，则<strong>直接</strong>返回False,若x为True，则再考虑y。<br>11.error：出错力。</p>
-<p>练习<br>2.1-2：改个符号，什么都好说<br>理解了过程，重写一遍也很快吧。</p>
+<p><strong>循环不变式与插入排序的正确性</strong><br>
+<strong>循环不变式</strong>：在讨论第k个数时，前k-1个数的序列（该实例中）的<strong>性质</strong>。<br>
+意义：算法正确性。<br>
+性质：<br>
+1.初始化：循环的第一次迭代<strong>前</strong>，其为真。<br>
+2.保持：循环的某次迭代前其为真，则下一次迭代前其也为真。<br>
+3.终止：循环结束时，不变式提供一个有用的性质，性质有助于证明算法的正确性。<br>
+<strong>（迭代：在每次循环时执行的过程，如排序是实现对应数值的排序）</strong><br>
+证明前两条性质正确，则每次迭代前循环不变式为真。<br>
+这和数学归纳法（n=1正确，设n=k时正确，证明n=k+1时正确）很像（书上说是类似的）<br>
+<em>帮助理解</em>：循环不变式描述属性与性质，而不是什么式子。其一直为真不代表算法就是正确的。如在插入排序中，利用不断执行插入过程来实现算法，但通过验证输出才得到算法的正确性。<br>
+<strong>伪代码的约定</strong>:<br>
+1.缩进表示块结构：很好理解吧，独立开来了都。<br>
+2.循环与条件判断结构与高级语言有类似解释。<code>for x to y</code>从x正增加到y，downto表示相反过程。<br>
+3.<code>//</code>后紧跟注释（C：hello~）。<br>
+4.赋值与C类似，a = x为x赋给a。<br>
+5.变量局部，不使用全局变量<br>
+6.a[i]表示第i个元素（因为下标从1开始），a[1…y]表示a[1]到a[y]的y个元素。<br>
+7.对象与属性（和C语言的结构体与面向对象的编程语言类似）讨论的东西称为对象，他的性质称为属性。若C为对象，length为属性，用C.length访问它。<br>
+8.按值将参数传递给过程：被调用过程接受的是其参数的<strong>副本</strong>而非参数<strong>本身</strong>.<br>
+9.return将控制权交还为块前，大部分return伴随值的传递（不一定只有一个哦）<br>
+10.and和or是短路的，意思就是先处理前面的，<code>x and y</code>若x为False，则<strong>直接</strong>返回False,若x为True，则再考虑y。<br>
+11.error：出错力。</p>
+<p>练习<br>
+2.1-2：改个符号，什么都好说<br>
+理解了过程，重写一遍也很快吧。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;//输入数的个数</span><br><span class="line">    scanf(&quot;%d&quot;, &amp;n);//可能有的C语言编译器不支持</span><br><span class="line">    int a[n]; </span><br><span class="line">    for(int i = 0; i &lt; n; i++)&#123;</span><br><span class="line">        scanf(&quot;%d&quot;,&amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i = 1; i &lt; n; i++)&#123;</span><br><span class="line">        int j = i - 1;</span><br><span class="line">        int key = a[i];</span><br><span class="line">        while(j &gt;= 0 &amp;&amp; key &gt; a[j])&#123;</span><br><span class="line">            a[j+1] = a[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        a[j + 1] = key;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i = 0; i &lt; n; i++)&#123;</span><br><span class="line">        printf(&quot;%d\n&quot;, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>2.1-3:坏了，我牛魔的不会写伪代码啊</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for i = 1 to a.length</span><br><span class="line">   if key == a[i]</span><br><span class="line">    flag = 1</span><br><span class="line">    return i //我是认为这里已经交还控制权退出程序了</span><br><span class="line">if flag != 1</span><br><span class="line">return NIL</span><br></pre></td></tr></table></figure>
-<p>初始化：最开始什么都没有，显然不包含v<br>保持：第k+1次迭代前（此时i为k），若a[i]&#x3D;&#x3D;v，则显然a[1..k-1]不包含v，不然不至于到这里；若a[i]!&#x3D;v，也有a[1..k-1]不包含v，不然不至于到k；此时，若第k+1次迭代开始，则a[1..k]也一定不包含v，实现保持。<br>终止：研究在循环结束时发生了什么：循环在跳出或遍历后都实现结束，要么输出v，要么输出NIL，有特定且正确的输出。<br>2.1-4：我不是很理解“形式化描述”是什么意思。我姑且认为是输入输出好吧。<br>输入：输入两个以二进制形式用n位数组储存起来的整数<br>输出：输出保存上述两个二进制整数的和的二进制形式的数组。<br>伪代码：</p>
+<p>初始化：最开始什么都没有，显然不包含v<br>
+保持：第k+1次迭代前（此时i为k），若a[i]==v，则显然a[1…k-1]不包含v，不然不至于到这里；若a[i]!=v，也有a[1…k-1]不包含v，不然不至于到k；此时，若第k+1次迭代开始，则a[1…k]也一定不包含v，实现保持。<br>
+终止：研究在循环结束时发生了什么：循环在跳出或遍历后都实现结束，要么输出v，要么输出NIL，有特定且正确的输出。<br>
+2.1-4：我不是很理解“形式化描述”是什么意思。我姑且认为是输入输出好吧。<br>
+输入：输入两个以二进制形式用n位数组储存起来的整数<br>
+输出：输出保存上述两个二进制整数的和的二进制形式的数组。<br>
+伪代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for i = 1 to A.length(B.length) //似乎是都是n位，A与B长度一致</span><br><span class="line">  C[i] = A[i] + B[i]</span><br><span class="line">  if C[i] == 2</span><br><span class="line">     C[i] = 0</span><br><span class="line">     C[i+1] += 1</span><br></pre></td></tr></table></figure>
-
-<h4 id="分析算法"><a href="#分析算法" class="headerlink" title="分析算法"></a>分析算法</h4><p>分析算法的对象通常是<strong>度量时间</strong>。<br>我们需要一个模型来实现对度量时间的分析，这本书中使用的是单处理器计算模型RAM（random access machine）<del>在CSAPP里我也见过这厮</del>为什么使用它呢？因为它是单处理器，不存在指令的并发，而是一条一条地进行。<br>不能滥用RAM模型，怎么理解？其实意思就是不存在类似“排序指令”这种本需要多条指令实现的单条指令，单条指令包括的是计算机中常见的指令：<strong>算术指令</strong>（加减乘除，取余，上下取整），<strong>数据移动指令</strong>（装入，存储，复制），<strong>控制指令</strong>（条件与无条件转移，程序调用与返回）<br>RAM中数据类型包括整数与浮点（小数），本书一般不关注精度，但某些应用至关重要<br>举例理解：lgn再向上取整取得n二进制表示不大于的最高位数，向上取整可以等效为乘一个大于1的浮点数c.<br>真实的计算机包含以上未陈述的一些指令<del>很好理解，因为计算机如果只用这些指令，我都不敢想它有多慢</del>我们尽量避免使用这些指令。<br>在RAM模型中，我们不试图对计算机中常见的内存层次进行建模，也就是说我们不对高速缓存与虚拟内存进行建模。<br>插入排序的运算时间显而易见地随输入规模的增大而增大，此外与输入数据的已排序程度有关。<br><strong>输入规模</strong>的最佳概念依赖于研究的问题，意思是根据研究问题的不同，你判断输入规模大小的判定点是不一致的。你想排序数字，那其规模最佳取决于输入数字的多少；让一个小人跨越障碍达到终点，其规模取决于障碍多少、路途长度。<br>一个算法在特定输入上的运行时间是指执行的基本操作数或步数。假定执行每行伪代码需要常量时间，设第i行每次执行需要c<del>i</del>的所谓“代价”。可以参见接下来对插入排序伪代码的分析。<br><strong>为什么执行循环体的次数少于测试的一次</strong>：因为最后一次测试判断跳出循环，但是也是算在测试次数里呀。<br>对两种极端情况（已排好，反向排好）的分析。已排好的是一次函数，很好理解，因为已经和循环体无关了，t<del>j</del>都是1来着，只需要对第一层循环分析；而反向排序是二次也很好理解，因为t<del>j</del>可以被写成n<em>n的函数，n</em>n二次了最高也就二次。<br>通常我们的分析也仅限于<strong>最坏情况</strong>与<strong>平均情况</strong>，而我们主要针对<strong>最坏情况</strong>分析。三点理由：了解上界、最坏情况经常出现（？）、都是二次函数<del>懒得讨论平均情况</del>规模差不多。<br><strong>增长量级</strong>：很显而易见的概念，我们习惯性忽略较低量级的量，因为在规模扩大后他们对运算的影响相比高量级可以忽略。这是我们做出的更简化的抽象，因为你本身以c<del>i</del>来抽象化语句的实际代价就是有代价的。最坏情况为二次函数的，我们计最坏情况运行时间为θ(n^2^)。<br>更低增长量级更有效，同等量级也可以比较。</p>
-<p>练习<br>2.2-1:很显而易见的θ(n^3^)吧<br>2.2-2:<br>伪代码：</p>
+<h4 id="分析算法">分析算法</h4>
+<p>分析算法的对象通常是<strong>度量时间</strong>。<br>
+我们需要一个模型来实现对度量时间的分析，这本书中使用的是单处理器计算模型RAM（random access machine）<s>在CSAPP里我也见过这厮</s>为什么使用它呢？因为它是单处理器，不存在指令的并发，而是一条一条地进行。<br>
+不能滥用RAM模型，怎么理解？其实意思就是不存在类似“排序指令”这种本需要多条指令实现的单条指令，单条指令包括的是计算机中常见的指令：<strong>算术指令</strong>（加减乘除，取余，上下取整），<strong>数据移动指令</strong>（装入，存储，复制），<strong>控制指令</strong>（条件与无条件转移，程序调用与返回）<br>
+RAM中数据类型包括整数与浮点（小数），本书一般不关注精度，但某些应用至关重要<br>
+举例理解：lgn再向上取整取得n二进制表示不大于的最高位数，向上取整可以等效为乘一个大于1的浮点数c.<br>
+真实的计算机包含以上未陈述的一些指令<s>很好理解，因为计算机如果只用这些指令，我都不敢想它有多慢</s>我们尽量避免使用这些指令。<br>
+在RAM模型中，我们不试图对计算机中常见的内存层次进行建模，也就是说我们不对高速缓存与虚拟内存进行建模。<br>
+插入排序的运算时间显而易见地随输入规模的增大而增大，此外与输入数据的已排序程度有关。<br>
+<strong>输入规模</strong>的最佳概念依赖于研究的问题，意思是根据研究问题的不同，你判断输入规模大小的判定点是不一致的。你想排序数字，那其规模最佳取决于输入数字的多少；让一个小人跨越障碍达到终点，其规模取决于障碍多少、路途长度。<br>
+一个算法在特定输入上的运行时间是指执行的基本操作数或步数。假定执行每行伪代码需要常量时间，设第i行每次执行需要c~i~的所谓“代价”。可以参见接下来对插入排序伪代码的分析。<br>
+<strong>为什么执行循环体的次数少于测试的一次</strong>：因为最后一次测试判断跳出循环，但是也是算在测试次数里呀。<br>
+对两种极端情况（已排好，反向排好）的分析。已排好的是一次函数，很好理解，因为已经和循环体无关了，t~j~都是1来着，只需要对第一层循环分析；而反向排序是二次也很好理解，因为t~j~可以被写成n<em>n的函数，n</em>n二次了最高也就二次。<br>
+通常我们的分析也仅限于<strong>最坏情况</strong>与<strong>平均情况</strong>，而我们主要针对<strong>最坏情况</strong>分析。三点理由：了解上界、最坏情况经常出现（？）、都是二次函数<s>懒得讨论平均情况</s>规模差不多。<br>
+<strong>增长量级</strong>：很显而易见的概念，我们习惯性忽略较低量级的量，因为在规模扩大后他们对运算的影响相比高量级可以忽略。这是我们做出的更简化的抽象，因为你本身以c~i~来抽象化语句的实际代价就是有代价的。最坏情况为二次函数的，我们计最坏情况运行时间为θ(n^2^)。<br>
+更低增长量级更有效，同等量级也可以比较。</p>
+<p>练习<br>
+2.2-1:很显而易见的θ(n^3^)吧<br>
+2.2-2:<br>
+伪代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">for i=1 to A.length-1</span><br><span class="line">  j=i</span><br><span class="line">  key=A[i]</span><br><span class="line">  for k=i+1 to A.length</span><br><span class="line">    if A[k]&lt;key</span><br><span class="line">      key=A[k]</span><br><span class="line">      j=k</span><br><span class="line">  temp=A[j]</span><br><span class="line">  A[j]=A[i]</span><br><span class="line">  A[i]=temp //这实际上实现的就是所谓swap()的过程</span><br></pre></td></tr></table></figure>
-<p><strong>初始化</strong>：对于单个元素A[1]是对的<br><strong>保持</strong>：每次迭代之前都实现排序，是对的（解释：你在i&#x3D;n-1时成立时，转到i&#x3D;n的情况，此时你需要对后续的实现选择最小值交换，结束后在i&#x3D;n+1时，前面n项又实现排序）<br><strong>终止</strong>：跳出循环时排序正确，故而算法正确<br><strong>为什么只用对前n-1个元素分析</strong>：因为最后一次排序（对第二大的数字）比较排序中，已经把最大的和第二大的交换位置了，现在最后一位上一定是最大的。<br>选择排序的最好情况与最坏情况都是θ(n^2^)，因为不论是否找得到最小元素，都需要遍历两次（循环嵌套两层）来进行寻找。<br>2.2-3：平均n&#x2F;2，最坏n<br>时间规模显然是θ(n)，因为只有一层循环<br>伪代码：</p>
+<p><strong>初始化</strong>：对于单个元素A[1]是对的<br>
+<strong>保持</strong>：每次迭代之前都实现排序，是对的（解释：你在i=n-1时成立时，转到i=n的情况，此时你需要对后续的实现选择最小值交换，结束后在i=n+1时，前面n项又实现排序）<br>
+<strong>终止</strong>：跳出循环时排序正确，故而算法正确<br>
+<strong>为什么只用对前n-1个元素分析</strong>：因为最后一次排序（对第二大的数字）比较排序中，已经把最大的和第二大的交换位置了，现在最后一位上一定是最大的。<br>
+选择排序的最好情况与最坏情况都是θ(n^2^)，因为不论是否找得到最小元素，都需要遍历两次（循环嵌套两层）来进行寻找。<br>
+2.2-3：平均n/2，最坏n<br>
+时间规模显然是θ(n)，因为只有一层循环<br>
+伪代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for i=1 to A.length</span><br><span class="line">  if A[i]==key</span><br><span class="line">    return i</span><br></pre></td></tr></table></figure>
-
-<h4 id="设计算法"><a href="#设计算法" class="headerlink" title="设计算法"></a>设计算法</h4><h5 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h5><p>分治，顾名思义就是分开解决问题，三个步骤分别是：分解、解决、合并，是比较好理解的一种思想。<br>其中举出的例子是归并排序，这个是我自己学C入门的时候比较困惑的一种排序算法。原理就是递归地去分解序列（一直二分）直到最后变为一群单个数字的序列。这里使用了递归的计算方法，当时不理解的地方可能就在于此。<del>毕竟递归相比循环反常规一点，不是吗</del><br>我们来理解他一大段看起来很可怕的话。这个MERGE过程是在最后两个小二分序列合成总序列的情况下讨论。分别拿牌大家应该不难理解，有点像一个左右不断的比大小，谁小拿谁，然后继续。这个“哨兵”是新提出的概念。顾名思义，哨兵用来指示。在这个情景下，哨兵是用于检测小序列是否被抽尽，所以他使用所谓“无穷”这一带有指示意义<strong>且不影响总排序过程</strong>的数字来担任哨兵。在某个小序列出现哨兵后即代表这个序列穷尽，于是将另一个小序列的剩余部分（已经排好了）直接塞入总序列末尾。<br>伪代码和示意图可以有效增进了解。<br>由于只有一层循环，所以MERGE过程时间规模是θ(n)（不是for3个就是三层循环，要看循环的嵌套）<br>后续使用递归来实现每个都是如上过程的排序，到最小（1个）的时候仅是两个数字的比较。</p>
-<h5 id="分析分治算法"><a href="#分析分治算法" class="headerlink" title="分析分治算法"></a>分析分治算法</h5><p>这段话对分治算法的分析已经说的很清楚了，就是用一个规模常数c，小于c使用常量时间，大于c使用的则是aT(n&#x2F;b)+C(n)+C(n)时间。<del>a不等于b的情况似乎很常见但我不知道</del><br>对归并排序算法的分析中，显然输入数字的规模为2的幂次简单许多，但是用上面的方法结合上下取整也是能实现目的的。<br>我有点不是很能理解为什么分解使用的是常量时间，你不是要去遍历序列来得到中间分割的位置吗，那为什么不是θ(n)?<br>“解决”中，a与b都是2。<br>这里的c应该为1。<br>然后我想了好久，发现这里分解仅仅只是找到索引，而并非直接找到元素位置（去遍历）相当于你只是简单进行了一个n&#x2F;2的计算，而并非去遍历n&#x2F;2个元素，所以使用的应该为常量时间。<br>至于为什么T(n)为θ(nlgn)，且听后回分解。<br><del>以及一个很简单的递归树，展示了疯狂二分的过程</del><br>递归的总层数是lgn+1，如何理解？他其实就是在设n为2^k^的情况下，层数就是k+1。</p>
-<p>练习<br>2.3-1:略，可以自己再画辅助理解一下<br>2.3-2：思路：用一个参数指代提取出去数字的数目，达到特定值（子序列长度）时跳出。<br>2.3-3：简单的数学证明，格式为：<br>k&#x3D;2 √成立<br>设k&#x3D;n时成立，证明k&#x3D;n+1时成立<br>2.3-4：不是很理解它让我写什么，是递归的判断条件吗？</p>
+<h4 id="设计算法">设计算法</h4>
+<h5 id="分治法">分治法</h5>
+<p>分治，顾名思义就是分开解决问题，三个步骤分别是：分解、解决、合并，是比较好理解的一种思想。<br>
+其中举出的例子是归并排序，这个是我自己学C入门的时候比较困惑的一种排序算法。原理就是递归地去分解序列（一直二分）直到最后变为一群单个数字的序列。这里使用了递归的计算方法，当时不理解的地方可能就在于此。<s>毕竟递归相比循环反常规一点，不是吗</s><br>
+我们来理解他一大段看起来很可怕的话。这个MERGE过程是在最后两个小二分序列合成总序列的情况下讨论。分别拿牌大家应该不难理解，有点像一个左右不断的比大小，谁小拿谁，然后继续。这个“哨兵”是新提出的概念。顾名思义，哨兵用来指示。在这个情景下，哨兵是用于检测小序列是否被抽尽，所以他使用所谓“无穷”这一带有指示意义<strong>且不影响总排序过程</strong>的数字来担任哨兵。在某个小序列出现哨兵后即代表这个序列穷尽，于是将另一个小序列的剩余部分（已经排好了）直接塞入总序列末尾。<br>
+伪代码和示意图可以有效增进了解。<br>
+由于只有一层循环，所以MERGE过程时间规模是θ(n)（不是for3个就是三层循环，要看循环的嵌套）<br>
+后续使用递归来实现每个都是如上过程的排序，到最小（1个）的时候仅是两个数字的比较。</p>
+<h5 id="分析分治算法">分析分治算法</h5>
+<p>这段话对分治算法的分析已经说的很清楚了，就是用一个规模常数c，小于c使用常量时间，大于c使用的则是aT(n/b)+C(n)+C(n)时间。<s>a不等于b的情况似乎很常见但我不知道</s><br>
+对归并排序算法的分析中，显然输入数字的规模为2的幂次简单许多，但是用上面的方法结合上下取整也是能实现目的的。<br>
+我有点不是很能理解为什么分解使用的是常量时间，你不是要去遍历序列来得到中间分割的位置吗，那为什么不是θ(n)?<br>
+“解决”中，a与b都是2。<br>
+这里的c应该为1。<br>
+然后我想了好久，发现这里分解仅仅只是找到索引，而并非直接找到元素位置（去遍历）相当于你只是简单进行了一个n/2的计算，而并非去遍历n/2个元素，所以使用的应该为常量时间。<br>
+至于为什么T(n)为θ(nlgn)，且听后回分解。<br>
+<s>以及一个很简单的递归树，展示了疯狂二分的过程</s><br>
+递归的总层数是lgn+1，如何理解？他其实就是在设n为2^k^的情况下，层数就是k+1。</p>
+<p>练习<br>
+2.3-1:略，可以自己再画辅助理解一下<br>
+2.3-2：思路：用一个参数指代提取出去数字的数目，达到特定值（子序列长度）时跳出。<br>
+2.3-3：简单的数学证明，格式为：<br>
+k=2 √成立<br>
+设k=n时成立，证明k=n+1时成立<br>
+2.3-4：不是很理解它让我写什么，是递归的判断条件吗？</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">recursiveInsertionSort(A,n)  </span><br><span class="line">    if n&lt;=1</span><br><span class="line">        return   </span><br><span class="line">    recursiveInsertionSort(A,n-1)  </span><br><span class="line">    key= A[n]  </span><br><span class="line">    j=n-1  </span><br><span class="line">    while j &gt;=0 and A[j]&gt;key </span><br><span class="line">        A[j+1]=A[j]</span><br><span class="line">        j--   </span><br><span class="line">    A[j+1]=key  </span><br></pre></td></tr></table></figure>
-<p>2.3-5:<br>伪代码（递归版）</p>
+<p>2.3-5:<br>
+伪代码（递归版）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">divisionsearch(A,low,high)</span><br><span class="line">  if A[(high-low)/2+1]==key</span><br><span class="line">    return (high-low)/2+1</span><br><span class="line">  else if A[(high-low)/2+1]&gt;key</span><br><span class="line">    divisionsearch(A,low,(high-low)/2)</span><br><span class="line">  else</span><br><span class="line">    divisionsearch(A,(high-low)/2+1,high)</span><br></pre></td></tr></table></figure>
-<p>使用的还是那张递归树的图，只需要<strong>浅浅把其中代价的cn改成c</strong>，这里是为什么呢？因为它只是浅浅地寻找了<strong>特定索引的元素</strong>，而没有去<strong>依次</strong>分析索引之前的元素。这里我们就要纠正一个误区了，并不是索引中间的元素就一定要×n，而是要看你有没有去遍历之前的元素。这里你显然是没有的。前面元素是啥？不知道。你只需要索取那个元素就好了。而在排序中，你需要知道那些元素的值方可进行排序，相当于进行了一次遍历。<br>2.3-6：可以，这样避免了线性查找的时间复杂，不需要遍历。这种排序一般称为“二分插入排序”或“折半插入排序”（Binary Insertion Sort）。<br>2.3-7：既然时间规模为θ(nlgn)，则代表进行一次线性查找与一次二分查找</p>
+<p>使用的还是那张递归树的图，只需要<strong>浅浅把其中代价的cn改成c</strong>，这里是为什么呢？因为它只是浅浅地寻找了<strong>特定索引的元素</strong>，而没有去<strong>依次</strong>分析索引之前的元素。这里我们就要纠正一个误区了，并不是索引中间的元素就一定要×n，而是要看你有没有去遍历之前的元素。这里你显然是没有的。前面元素是啥？不知道。你只需要索取那个元素就好了。而在排序中，你需要知道那些元素的值方可进行排序，相当于进行了一次遍历。<br>
+2.3-6：可以，这样避免了线性查找的时间复杂，不需要遍历。这种排序一般称为“二分插入排序”或“折半插入排序”（Binary Insertion Sort）。<br>
+2.3-7：既然时间规模为θ(nlgn)，则代表进行一次线性查找与一次二分查找</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// warning:this code maybe a wrong pseudo!!!!</span><br><span class="line">divisionsearch(A,low,high,key)</span><br><span class="line">  if A[(high-low)/2+1]==key</span><br><span class="line">    return (high-low)/2+1</span><br><span class="line">  else if A[(high-low)/2+1]&gt;key</span><br><span class="line">    divisionsearch(A,low,(high-low)/2,key)</span><br><span class="line">  else</span><br><span class="line">    divisionsearch(A,(high-low)/2+1,high,key)</span><br><span class="line">searchadd</span><br><span class="line">for i=1 to A.length</span><br><span class="line">  divisionsearch(S,1,A.length,x-A[i]) </span><br></pre></td></tr></table></figure>
 
     </div>
@@ -521,12 +626,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">NaNm</span>
+    <span title="站点总字数">14k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">NaN:aN</span>
+    <span title="站点阅读时长">13 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
