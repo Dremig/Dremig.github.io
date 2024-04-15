@@ -22,23 +22,20 @@
     var CONFIG = {"hostname":"dremig.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="无意义的字段">
+  <meta name="description" content="汇编，很可怕的一门语言，听说会汇编的都是佬（？ 私以为它的语法并不非常困难，但凡有一些计算机思维都可以解决。难在于其与计算机系统的紧密结合，一种软硬件思维的转换，一种系统的思维…好，编不下去了，工科男想不出太优美的辞藻。 本article适合已有至少一门高级语言编程基础的读者阅读。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始的博客搭建(hexo+github)">
-<meta property="og:url" content="http://dremig.github.io/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/index.html">
+<meta property="og:title" content="汇编语言(持续更新版)">
+<meta property="og:url" content="http://dremig.github.io/2024/04/01/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/index.html">
 <meta property="og:site_name" content="Dremigの博客（差点报废版）">
-<meta property="og:description" content="无意义的字段">
+<meta property="og:description" content="汇编，很可怕的一门语言，听说会汇编的都是佬（？ 私以为它的语法并不非常困难，但凡有一些计算机思维都可以解决。难在于其与计算机系统的紧密结合，一种软硬件思维的转换，一种系统的思维…好，编不下去了，工科男想不出太优美的辞藻。 本article适合已有至少一门高级语言编程基础的读者阅读。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://dremig.github.io/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/image.png">
-<meta property="og:image" content="http://dremig.github.io/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/1.png">
-<meta property="article:published_time" content="2024-02-13T10:13:18.000Z">
-<meta property="article:modified_time" content="2024-02-26T15:44:33.251Z">
+<meta property="article:published_time" content="2024-04-01T04:59:34.000Z">
+<meta property="article:modified_time" content="2024-04-02T00:56:53.672Z">
 <meta property="article:author" content="Dremig">
-<meta property="article:tag" content="计算机实用技能">
+<meta property="article:tag" content="汇编语言：基于X86处理器">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://dremig.github.io/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/image.png">
 
-<link rel="canonical" href="http://dremig.github.io/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/">
+<link rel="canonical" href="http://dremig.github.io/2024/04/01/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">
 
 
 <script id="page-configurations">
@@ -51,7 +48,7 @@
   };
 </script>
 
-  <title>从零开始的博客搭建(hexo+github) | Dremigの博客（差点报废版）</title>
+  <title>汇编语言(持续更新版) | Dremigの博客（差点报废版）</title>
   
 
 
@@ -171,7 +168,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://dremig.github.io/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/">
+    <link itemprop="mainEntityOfPage" href="http://dremig.github.io/2024/04/01/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpeg">
@@ -184,7 +181,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          从零开始的博客搭建(hexo+github)
+          汇编语言(持续更新版)
         </h1>
 
         <div class="post-meta">
@@ -194,14 +191,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2024-02-13 18:13:18" itemprop="dateCreated datePublished" datetime="2024-02-13T18:13:18+08:00">2024-02-13</time>
+              <time title="创建时间：2024-04-01 12:59:34" itemprop="dateCreated datePublished" datetime="2024-04-01T12:59:34+08:00">2024-04-01</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-02-26 23:44:33" itemprop="dateModified" datetime="2024-02-26T23:44:33+08:00">2024-02-26</time>
+                <time title="修改时间：2024-04-02 08:56:53" itemprop="dateModified" datetime="2024-04-02T08:56:53+08:00">2024-04-02</time>
               </span>
 
           
@@ -217,14 +214,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3k</span>
+              <span>2.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -236,105 +233,102 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><s>无意义的字段</s></p>
+        <p>汇编，很可怕的一门语言，听说会汇编的都是佬（？<br>
+私以为它的语法并不非常困难，但凡有一些计算机思维都可以解决。难在于其与计算机系统的紧密结合，一种软硬件思维的转换，一种系统的思维…好，编不下去了，工科男想不出太优美的辞藻。<br>
+本article适合已有至少一门高级语言编程基础的读者阅读。</p>
 <span id="more"></span>
-<p>曾几何时，我一直梦想有自己的一个网页，可以在上面肆意玩耍（不是），然后我终于实现了。<br>
-很离谱的开场白啊。<br>
-那么大家好，这里是Dremig，这篇文章会大致讲一下利用hexo+github框架搭建个人博客网站的方法与我部署时出现的问题解决经验。如果还有疑惑的地方，欢迎在评论区讨论。<br>
-参照的文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细）</a><br>
-<strong>感谢枫叶大佬！</strong><br>
-<strong>以及，PAY ATTENTION！</strong><br>
-本文会包含一些内容的补充，即<strong>补充</strong>标签，没有兴趣或没有时间的可以跳过，不影响博客配置整个过程。</p>
-<h2 id="从零开始的博客搭建hexogithub框架"><a class="markdownIt-Anchor" href="#从零开始的博客搭建hexogithub框架"></a> 从零开始的博客搭建（hexo+github框架）</h2>
-<h3 id="github的进入与注册"><a class="markdownIt-Anchor" href="#github的进入与注册"></a> github的进入与注册</h3>
-<p>首先我们需要在github这一学术网站上注册账号，后续我们也需要对这一账号与个人网站进行关联。<br>
-这里就不得不提出<strong>经验1</strong>了，如何不翻墙进入github?<br>
-你的github会不会时而能进，时而在打转大半天后&quot;time out&quot;?倘若你进行一次加速会好很多。<br>
-如果你想测试自己能不能进github，可以在cmd里用<code>ping www.github.com</code>测试。如果timed out就是不行的。<br>
-在hosts文件末尾添加以下语句（仅windows系统）：<br>
-<code>140.82.114.4	github.com</code><br>
-<code>199.232.5.194	github.global.ssl.fastly.net</code><br>
-windows系统hosts文件位置:C:\Windows\System32\drivers\etc<br>
-Mac OS系统:/etc/<br>
-Linux及其它类Unix系统:/etc/<br>
-Android系统:/system/etc/<br>
-<strong>注意，修改时需要管理员权限！</strong><br>
-<strong>补充</strong>：hosts文件的作用</p>
-<ul>
-<li>加快域名解析</li>
-<li>构建映射关系</li>
-<li>屏蔽网站或广告</li>
-<li>调试、测试</li>
-</ul>
-<p>进入github，点击右上角sign up进行注册<br>
-<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/image.png" alt="alt text"><br>
-应该是需要绑定邮箱的，亲测qq邮箱可以使用。<br>
-<s>后续不表</s></p>
-<h3 id="git的下载"><a class="markdownIt-Anchor" href="#git的下载"></a> git的下载</h3>
-<p>进入<a target="_blank" rel="noopener" href="https://git-scm.com/download">git官网</a><br>
-![alt text](&lt;屏幕截图 2024-02-15 003110.png&gt;)<br>
-依照自己电脑的系统选择合适的下载就可以啦。<br>
-![alt text](&lt;屏幕截图 2024-02-15 003538.png&gt;)<br>
-<strong>注意点击去后要选setup，不然下载了什么都不知道。而且注意自己电脑是几位的（64bit安装32bit没问题，32bit安装64bit有问题的）</strong><br>
-然后点击下载得到的<strong>Git-2.43.0-64-bit.exe</strong>（我下载得到的叫这个来着）<br>
-依次得到以下页面：<br>
-![alt text](&lt;屏幕截图 2024-02-15 004011.png&gt;)<br>
-起始页面，直接点击next<br>
-![alt text](&lt;屏幕截图 2024-02-15 004053.png&gt;)<br>
-可以点选<strong>Additional icons</strong>那个选项添加快捷方式（桌面图标），这是默认不选的，其他尽量不要动，保持默认（主要是因为我也不清楚效果）<br>
-![alt text](&lt;屏幕截图 2024-02-15 004132.png&gt;)<br>
-使用Vim编辑器，保持默认。<br>
-![alt text](&lt;屏幕截图 2024-02-15 004158.png&gt;)<br>
-![alt text](&lt;屏幕截图 2024-02-15 004211.png&gt;)<br>
-这里的默认选取意思是不仅可以通过Git Bash操作，也可以通过cmd命令行操作，后续会用到这一点的。<br>
-![alt text](&lt;屏幕截图 2024-02-15 004229.png&gt;)<br>
-![alt text](&lt;屏幕截图 2024-02-15 004243.png&gt;)<br>
-使用HTTPS传输后台，保持默认。<br>
-![alt text](&lt;屏幕截图 2024-02-15 004312.png&gt;)<br>
-终端模拟器的配置，保持默认。<br>
-![alt text](&lt;屏幕截图 2024-02-15 004326.png&gt;)<br>
-&quot;git pull&quot;命令用于从远程仓库（也就是我们的电脑）获取最新代码并合并到当前的分支里，<s>是好的</s>所以保持默认模式。<br>
-![alt text](&lt;屏幕截图 2024-02-15 004341.png&gt;)<br>
-有总比没有好（雾）<br>
-![alt text](&lt;屏幕截图 2024-02-15 004357.png&gt;)<br>
-<img src="/2024/02/13/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-hexo-github/1.png" alt="alt text"><br>
-<s>由于是第二次安装，所以好像乱序了（估计默认我只是修改而已）大家尽量按默认来（除了那个桌面图标的添加与否）</s><br>
-最后选择目录，安装…<br>
-安装成功，桌面鼠标右键显示：<br>
-![alt text](&lt;屏幕截图 2024-02-15 032233.png&gt;)<br>
-点击<strong>Open Git Bash here</strong>，显示如下页面：<br>
-![alt text](&lt;屏幕截图 2024-02-15 032406.png&gt;)<br>
-输入<strong>git</strong>，显示：<br>
-![alt text](&lt;屏幕截图 2024-02-15 032423.png&gt;)<br>
-证明配置基本成功。<br>
-git是一个非常重要的工具，后续我也会出一个简要的教程，了解一下它的魅力~。</p>
-<h3 id="绑定github"><a class="markdownIt-Anchor" href="#绑定github"></a> 绑定github</h3>
-<p>github本身是可以通过一个选项&quot;add file&quot;上传文件的，但是我亲测在不翻墙的情况下是非常慢的（乌龟.gif）<s>翻墙也慢，其实就是不好用，不想用（不是）</s><br>
-所以我们使用SSH（安全外壳协议）来实现数据的安全传输，关于其重要性可以参看这篇文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35246620/article/details/54317740">详述SSH原理及应用</a><br>
-首先我们<s>在D盘</s>新建一个文件夹，比如叫&quot;git_codelife&quot;。<br>
-我们在git里面进入这个文件夹，具体方法有两种，其一是可以直接在文件夹空白处右键点击<strong>Open Git Bash here</strong>，其二是在Git Bash里面输入<code>cd D:/git_codelife</code>(git对大小写不敏感，也就是每个字母大写小写，只要字母每个不输错，都能进入正确的文件夹。<code>cd</code>也是常见的命令行命令之一，用于进入对应的文件夹)<br>
-输入ssh，显示如下页面：<br>
-即已经安装ssh，我们输入<code>ssh-keygen -t rsa</code><strong>（空格！！！）</strong><br>
-<strong>补充</strong><br>
-<code>ssh-keygen [选项]</code>命令 用于为ssh生成、管理和转换认证密钥，它支持RSA和DSA两种认证密钥。<br>
-后缀选项可以跟随内容：<br>
--b：指定密钥长度；<br>
--e：读取openssh的私钥或者公钥文件；<br>
--C：添加注释；<br>
--f：指定用来保存密钥的文件名；<br>
--i：读取未加密的ssh-v2兼容的私钥/公钥文件，然后在标准输出设备上显示openssh兼容的私钥/公钥；<br>
--l：显示公钥文件的指纹数据；<br>
--N：提供一个新密语；<br>
--P：提供（旧）密语；<br>
--q：静默模式；<br>
--t：指定要创建的密钥类型。<br>
-这里我们的目的显然是生成rsa密钥，那一定会有小伙伴问了，rsa和dsa区别何在呢？<br>
-rsa与dsa都是加密算法，其中rsa为非对称加密，而dsa为对称加密。<br>
-那就不得不引出密钥的对称与非对称加密了！<br>
-密钥分为两种：对称密钥与非对称密钥<br>
-<strong>对称密钥加密</strong>，又称私钥加密，即信息的发送方和接收方用一个密钥去加密和解密数据。它的最大优势是加/解密速度快，适合于对大数据量进行加密，但密钥管理困难。<br>
-<strong>非对称密钥加密系统</strong>，又称公钥密钥加密。它需要使用一对密钥来分别完成加密和解密操作，一个公开发布，即公开密钥，另一个由用户自己秘密保存，即私用密钥。信息发送者用公开密钥去加密，而信息接收者则用私用密钥去解密。公钥机制灵活，但加密和解密速度却比对称密钥加密慢得多。<br>
-（更深的内容，参见<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7615d036969f">公钥和私钥的完全解释（包括对称算法和非对称算法、RSA解释）</a>）</p>
+<h3 id="第一章"><a class="markdownIt-Anchor" href="#第一章"></a> 第一章</h3>
+<p>汇编语言是不可移植的，很多高级语言是可移植的。<br>
+一对一与一对多：机器语言与汇编语言、高级语言与汇编语言<br>
+虚拟机概念：L0：原生机器语言<br>
+L1：汇编语言<br>
+两种语言的转换通过“解释”与“翻译”进行，解释是从L0到L1，翻译是从L1到L0<br>
+虚拟机理解为一个用于模拟物理或虚拟计算机的软件程序<br>
+VM1执行L1，VM0执行L0<br>
+“四个Level”：高级语言-&gt;汇编语言-&gt;指令集架构-&gt;数字逻辑<br>
+指令集架构(ISA)：对于一台机器，其被赋予的指令集(如加法减法左移右移)称为机器语言<br>
+汇编语言：翻译层<br>
+高级语言<br>
+MSB：最高有效位<br>
+LSB：最低有效位<br>
+有符号补码与无符号编码<br>
+二进制加法<br>
+一个字是两个字节（16位）<br>
+十六进制：二进制的幂<br>
+A-B等效为A+(-B)<br>
+复习一下，补码转十进制：按位取反（0、1互换），加1，再使用一般读二进制转十进制方法<br>
+|MIN_VALUE| = |MAX_VALUE| + 1<br>
+字符存储：ASCII(C等)，Unicode（java等）<br>
+0-31称为ASCII控制字符<br>
+布尔表达式(1 or 0)<br>
+与或非<br>
+优先级，括号内先来，非比与或高<br>
+真值表（nmd也是上到离散了）<br>
+可以，结束罪恶而没太大用的第一章</p>
+<h3 id="第二章"><a class="markdownIt-Anchor" href="#第二章"></a> 第二章</h3>
+<h4 id="21"><a class="markdownIt-Anchor" href="#21"></a> 2.1</h4>
+<p><strong>CPU（中央处理单元</strong>）：算术逻辑操作的部件，包含寄存器，高频时钟(clock)，控制单元(CU)和算术逻辑单元（ALU）<br>
+<strong>内存存储单元</strong>用于再程序运行时保存指令与数据，接受来自CPU的请求，把数据从RAM(随机存储器)传输到CPU，并从CPU传输到内存<br>
+<strong>总线</strong>用于传输数据(数据类，I/O类，控制类，地址类)<br>
+数据总线在CPU和内存中传输数据与指令<br>
+I/O总线在CPU与系统输入输出设备之间传输数据<br>
+控制总线用二进制行为对设备行为进行同步<br>
+地址总线保持数据与指令的地址<br>
+机器周期<br>
+指令执行周期：</p>
+<ol>
+<li>CPU从指令队列取得指令，立刻增加指令指针的值（确保以后的指令的顺利执行）</li>
+<li>CPU对二进制的指令译码（场所：指令译码器）</li>
+<li>如果有操作数，CPU就从内存与寄存器中取得操作数（还顺便计算了）（计算场所：ALU）</li>
+<li>利用操作数，执行该指令，并更新部分状态标志位<br>
+（这里的状态标志位代表了数字与计算的状态，如计算是否溢出，数字是否为0，数字的符号等）</li>
+<li>如果输出操作数也是该指令的一部分 ，则CPU还需要其存放执行结果<br>
+<strong>简化：取指-&gt;译码-&gt;执行</strong><br>
+从内存读数据：</li>
+<li>把想要的数据地址放在地址总线上</li>
+<li>设置处理器RD（读取）引脚（也就是改变RD的值）</li>
+<li>等待一个时钟周期给存储器芯片进行响应</li>
+<li>将数据从数据总线复制到目标操作数<br>
+聪明的做法：<s>猜你喜欢</s><br>
+把长期使用过的数据放在Cache（高速存储器）里，在处理程序之前，这些东西就会被提前加载到Cache里，发生Cache Hit就节约了时间。<br>
+我们根据之前的步骤理解为什么减少了时间：<br>
+因为CPU直接从其缓存中获取数据，而无需访问主存。</li>
+<li>不需要把地址放在地址总线上：因为缓存命中发生在CPU内部或非常接近CPU的缓存中，CPU可以直接访问缓存中的数据，而无需将地址发送到外部的总线上。</li>
+<li>不需要设置处理器RD引脚：这个步骤是与内存控制器通信的一部分，用于指示内存进行读取操作。由于缓存是CPU内部的，这个步骤在缓存命中时是不必要的。</li>
+<li>不需要等待存储器芯片响应：等待时钟周期是为了给存储器芯片处理读取请求的时间。由于缓存的访问速度非常快，缓存命中时通常不需要等待周期。<br>
+简而言之，就是“拿到直接用”的方法，不需要从主存拿<br>
+这是硬件层面的操作，与程序软件层面的预处理没有直接关系。<br>
+X86里的Cache有两种：主Cache在CPU上，次Cache通过高速数据总线与CPU相连（不直接在CPU，显然速度稍慢）<br>
+Cache由SRAM（static RAM）组成，不需要为了保存数据一直刷新，DRAM(dynamic)与之区别就是要刷新，所以慢了<br>
+加载并执行程序：概括：使用程序加载器把程序加载到内存，加载后，OS(operating system,操作系统)把CPU指向程序的入口(入口即程序开始执行的地址)<br>
+分解指向入口的过程：</li>
+<li>OS找文件</li>
+<li>OS访问程序文件基本信息（文件大小，物理位置）</li>
+<li>OS确定内存一个可以用的位置，给你加载过来，为你分配内存块，并将基本信息加入描述符表中（描述符表，可以理解为一个进程的目录）</li>
+<li>OS开始执行程序的第一条机器指令（程序入口）。程序成为进程，OS为这个进程分配一个标识号(进程id)，并进行追踪</li>
+<li>程序进行，OS帮助满足系统资源的请求</li>
+<li>进程结束，你就没用了，从进程中移除</li>
+</ol>
+<p><strong>本节回顾</strong>Think and then see</p>
+<ol>
+<li>CU,ALU,clock</li>
+<li>控制、数据、地址</li>
+<li>寄存器在CPU里</li>
+<li>取址-&gt;译码-&gt;执行</li>
+<li>取得数值，计算</li>
+</ol>
+<h4 id="22"><a class="markdownIt-Anchor" href="#22"></a> 2.2</h4>
+<p>主要的操作模式：保护模式，实地址模式，系统管理模式，还有子模式：虚拟8086模式<br>
+保护模式就是有限制地运行程序，不能访问分配给自己的所谓“段”（也就是独属于自己的内存区域）之外的区域<br>
+实地址模式：没有限制了，可以随意访问及修改了（不存在内存保护措施）<br>
+系统管理模式：实现出内存访问外的更多机制管理<br>
+虚拟8086模式：保护模式的子模式，可以执行实地址模式软件<br>
+32位保护模式，理论最大可以寻址4GB（也就是2<sup>32</sup>字节）<br>
+PAE可以最大扩展至2<sup>36</sup>Byte<br>
+而实地址模式只能寻址1MB，如果虚拟8086模式，运行多个虚拟8086程序，每个都只能有自己的1MB。<br>
+为什么只能1MB（即2<sup>20</sup>Byte）<br>
+实模式是为早期的处理器，如8086和8088，专门设计的。这些处理器在面世时，计算机的内存大小相对有限，因此并不需要太大的寻址空间。然而，8086处理器具有20根地址总线，理论上可以寻址1MB（2^20字节）的内存空间，但它的寄存器是16位的，无法直接提供20位的地址。为了解决这个问题，8086处理器采用了存储器地址分段的方法，即使用两个16位寄存器（段寄存器和偏移地址）合成一个20位的物理地址。这种设计使得8086处理器能够访问其理论上的最大内存空间，即1MB。<br>
+<s>gpt说的真好</s></p>
 
     </div>
 
@@ -344,7 +338,7 @@ rsa与dsa都是加密算法，其中rsa为非对称加密，而dsa为对称加�
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%9E%E7%94%A8%E6%8A%80%E8%83%BD/" rel="tag"># 计算机实用技能</a>
+              <a href="/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%EF%BC%9A%E5%9F%BA%E4%BA%8EX86%E5%A4%84%E7%90%86%E5%99%A8/" rel="tag"># 汇编语言：基于X86处理器</a>
           </div>
 
         
@@ -353,13 +347,10 @@ rsa与dsa都是加密算法，其中rsa为非对称加密，而dsa为对称加�
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2024/02/13/Markdown%E8%AF%AD%E8%A8%80%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="prev" title="Markdown语言的使用">
-      <i class="fa fa-chevron-left"></i> Markdown语言的使用
+    <a href="/2024/03/02/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA%EF%BC%9A%E7%AC%AC%E4%B8%89%E7%AB%A0/" rel="prev" title="算法导论：第三章">
+      <i class="fa fa-chevron-left"></i> 算法导论：第三章
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2024/02/22/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA%EF%BC%9A%E7%AC%AC%E4%B8%80%E3%80%81%E4%BA%8C%E7%AB%A0-%E7%AE%97%E6%B3%95%E7%9A%84%E5%88%9D%E6%AD%A5%E5%85%A5%E9%97%A8/" rel="next" title="算法导论：第一、二章--算法的初步入门">
-      算法导论：第一、二章--算法的初步入门 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -423,7 +414,7 @@ rsa与dsa都是加密算法，其中rsa为非对称加密，而dsa为对称加�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhexogithub%E6%A1%86%E6%9E%B6"><span class="nav-number">1.</span> <span class="nav-text"> 从零开始的博客搭建（hexo+github框架）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#github%E7%9A%84%E8%BF%9B%E5%85%A5%E4%B8%8E%E6%B3%A8%E5%86%8C"><span class="nav-number">1.1.</span> <span class="nav-text"> github的进入与注册</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E7%9A%84%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.2.</span> <span class="nav-text"> git的下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%91%E5%AE%9Agithub"><span class="nav-number">1.3.</span> <span class="nav-text"> 绑定github</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text"> 第一章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="nav-number">2.</span> <span class="nav-text"> 第二章</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#21"><span class="nav-number">2.1.</span> <span class="nav-text"> 2.1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#22"><span class="nav-number">2.2.</span> <span class="nav-text"> 2.2</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
