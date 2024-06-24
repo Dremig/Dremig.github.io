@@ -2,27 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dremig.top/</loc>
-         <lastmod>2024-05-16</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dremig.top/about/</loc>
-         <lastmod>2024-05-16</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dremig.top/courses/computer_logic/</loc>
-         <lastmod>2024-05-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://dremig.top/notes/cpp/</loc>
-         <lastmod>2024-05-16</lastmod>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dremig.top/notes/hi/</loc>
-         <lastmod>2024-05-16</lastmod>
+         <lastmod>2024-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dremig.top/notes/cpp/cpp/</loc>
+         <lastmod>2024-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dremig.top/notes/cpp/cpp_pro/</loc>
+         <lastmod>2024-06-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dremig.top/notes/rust/rust/</loc>
+         <lastmod>2024-06-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
