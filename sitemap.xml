@@ -2,67 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dremig.top/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/about/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/courses/computer_logic/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/courses/fds/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://dremig.top/ctf/web/</loc>
+         <lastmod>2024-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://dremig.top/game/game/</loc>
+         <lastmod>2024-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://dremig.top/game/terr/</loc>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/notes/hi/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://dremig.top/notes/computer_web/the_first_chapter/computer_web_1/</loc>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/notes/cpp/cpp/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/notes/cpp/cpp_pro/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://dremig.top/notes/php/php_basic/</loc>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/notes/rust/rust/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/notes/something_funny/qqmusic/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/notes/something_funny/wsl_1/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/useful/hexo/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/useful/latex/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
     </url>
     <url>
          <loc>https://dremig.top/useful/qqbot/</loc>
-         <lastmod>2024-06-29</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-05</lastmod>
     </url>
 </urlset>
