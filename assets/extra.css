@@ -1,0 +1,81 @@
+/* 设置整个头部的背景颜色 */
+.md-header {
+    background-color: #faf1e1 !important; /* 米黄色背景 */
+}
+
+/* 设置标签导航的背景颜色 */
+.md-header .md-tabs {
+    background-color: #faf1e1 !important; /* 米黄色背景 */
+}
+
+/* 修改标签的背景颜色 */
+.md-header .md-tabs .md-tab {
+    background-color: #faf1e1 !important; /* 米黄色背景 */
+    color: #000000 !important; /* 标签文字颜色为黑色 */
+}
+
+/* 标签悬停时的颜色 */
+.md-header .md-tabs .md-tab:hover {
+    background-color: #faf1e1 !important; /* hover状态为稍深的米黄色 */
+}
+
+/* 修改活动标签的背景颜色 */
+.md-header .md-tabs .md-tab.is-active {
+    background-color: #faf1e1 !important; /* 活动标签稍深的米黄色 */
+}
+
+/* 按钮的样式设置 */
+.md-button {
+    background-color: #4682B4 !important; /* 按钮背景为蓝色 */
+    color: black!important; /* 按钮文字为白色 */
+}
+
+/* 页脚的背景颜色 */
+.md-footer {
+    background-color: #faf1e1 !important; /* 米黄色背景 */
+}
+
+/* 其他可能需要的头部样式 */
+.md-header .md-header--fixed {
+    background-color: #faf1e1 !important; /* 固定头部背景色 */
+}
+
+/* 修改搜索框背景颜色 */
+.md-header .md-header__search {
+    background-color: #faf1e1 !important; /* 米黄色 */
+}
+
+.md-tabs {
+    background-color: #faf1e1 !important; /* 米黄色 */    
+}
+
+
+
+
+.md-ellipsis {
+    color: #000;
+
+} 
+.md-tabs__link , .md-tabs__item , .md-tabs__item--active{
+    color: #000;
+}
+
+
+/* 设置正文字体大小 */
+body {
+    font-size: 0.175rem; /* 调整字体大小为较小的设置 (可以根据需要修改) */
+}
+
+/* 其他样式设置，确保中文字体正常 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans', 'Microsoft YaHei', 'PingFang SC', 'Heiti SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif !important; /* 所有标题使用 Noto Sans 字体 */
+}
+
+pre, code {
+    font-family: 'Courier New', monospace !important; /* 代码字体 */
+}
+
+/* 使得导航栏和按钮字体设置一致 */
+.md-header, .md-footer, .md-tabs, .md-button {
+    font-family: 'Noto Sans', 'Microsoft YaHei', 'PingFang SC', 'Heiti SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif !important; /* 导航栏和按钮字体 */
+}
