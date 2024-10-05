@@ -1,52 +1,51 @@
-/* 设置整个头部的背景颜色 */
 .md-header {
-    background-color: #faf1e1 !important; /* 米黄色背景 */
+    background-color: #faf1e1 !important; 
 }
 
-/* 设置标签导航的背景颜色 */
+
 .md-header .md-tabs {
-    background-color: #faf1e1 !important; /* 米黄色背景 */
+    background-color: #faf1e1 !important; 
 }
 
-/* 修改标签的背景颜色 */
+
 .md-header .md-tabs .md-tab {
-    background-color: #faf1e1 !important; /* 米黄色背景 */
-    color: #000000 !important; /* 标签文字颜色为黑色 */
+    background-color: #faf1e1 !important; 
+    color: #000000 !important; 
 }
 
-/* 标签悬停时的颜色 */
+
 .md-header .md-tabs .md-tab:hover {
-    background-color: #faf1e1 !important; /* hover状态为稍深的米黄色 */
+    background-color: #faf1e1 !important; 
 }
 
-/* 修改活动标签的背景颜色 */
+
 .md-header .md-tabs .md-tab.is-active {
-    background-color: #faf1e1 !important; /* 活动标签稍深的米黄色 */
+    background-color: #faf1e1 !important; 
 }
 
-/* 按钮的样式设置 */
+
 .md-button {
-    background-color: #4682B4 !important; /* 按钮背景为蓝色 */
-    color: black!important; /* 按钮文字为白色 */
+    background-color: #4682B4 !important; 
+    color: black!important; 
 }
 
-/* 页脚的背景颜色 */
+
 .md-footer {
-    background-color: #faf1e1 !important; /* 米黄色背景 */
+    background-color: #faf1e1 !important; 
 }
 
-/* 其他可能需要的头部样式 */
+
 .md-header .md-header--fixed {
-    background-color: #faf1e1 !important; /* 固定头部背景色 */
+    background-color: #faf1e1 !important; 
 }
 
-/* 修改搜索框背景颜色 */
+
 .md-header .md-header__search {
-    background-color: #faf1e1 !important; /* 米黄色 */
+    background-color: #faf1e1 !important; 
 }
 
 .md-tabs {
-    background-color: #faf1e1 !important; /* 米黄色 */    
+    background-color: #faf1e1 !important; 
 }
 
 
@@ -56,26 +55,60 @@
     color: #000;
 
 } 
-.md-tabs__link , .md-tabs__item , .md-tabs__item--active{
+.md-tabs__link , .md-tabs__item , .md-tabs__item--active, .md-source__repository, .md-source__icon ,.md-icon{
     color: #000;
 }
 
 
-/* 设置正文字体大小 */
-body {
-    font-size: 0.175rem; /* 调整字体大小为较小的设置 (可以根据需要修改) */
+
+
+
+
+
+.link-block {
+    display: flex;
+    align-items: center;
+    width: 600px; 
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-/* 其他样式设置，确保中文字体正常 */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Noto Sans', 'Microsoft YaHei', 'PingFang SC', 'Heiti SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif !important; /* 所有标题使用 Noto Sans 字体 */
+.link-block:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-pre, code {
-    font-family: 'Courier New', monospace !important; /* 代码字体 */
+.link-block img {
+    width: 80px;  
+    height: auto;
+    margin-right: 15px;
+    border-radius: 50%;
 }
 
-/* 使得导航栏和按钮字体设置一致 */
-.md-header, .md-footer, .md-tabs, .md-button {
-    font-family: 'Noto Sans', 'Microsoft YaHei', 'PingFang SC', 'Heiti SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif !important; /* 导航栏和按钮字体 */
+.link-content {
+    display: flex;
+    flex-direction: column;
 }
+
+.link-content strong {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.link-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+
+.md-logo {
+    width: 20px;  
+    height: auto; 
+}
+  

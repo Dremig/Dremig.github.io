@@ -94,7 +94,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../../../.." title="Dremig的个人网站" class="md-header__button md-logo" aria-label="Dremig的个人网站" data-md-component="logo">
       
-  <img src="../../../../../images/486.jpg" alt="logo">
+  <img src="../../../../../images/liang.avif" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -337,7 +337,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../../../.." title="Dremig的个人网站" class="md-nav__button md-logo" aria-label="Dremig的个人网站" data-md-component="logo">
       
-  <img src="../../../../../images/486.jpg" alt="logo">
+  <img src="../../../../../images/liang.avif" alt="logo">
 
     </a>
     Dremig的个人网站
@@ -1965,7 +1965,7 @@
 <p>存储转发运输(store-and-forward transmission):要求分组交换机在传输该分组之前必须接收到整个分组。</p>
 <p><img alt="alt text" src="../image-2.png" /></p>
 <p>这里图中给出的简单通路中，我们忽略了传播时延(即忽略这些比特以近光速传播的耗时)，由于在分组交换机发送前需要缓存已有分组，因此L bits的分组需要2L/R的时间传播(称为时延)。</p>
-<p>因此对于相对复杂的通路，总时延d~总~=N * L / R，其中N为通信链路的条数，我们也易看出N-1为路径分组交换机台数。</p>
+<p>因此对于相对复杂的通路，总时延d<sub>总</sub>=N * L / R，其中N为通信链路的条数，我们也易看出N-1为路径分组交换机台数。</p>
 <h6 id="_1">排队时延与分组输出</h6>
 <p>每个分组交换机都有多条通信链路与之相连，对于<strong>每条</strong>通信链路，分组交换机有一个输出缓存(output buffer，也称为输出队列output queue)。需要传输的分组，如果此时分组交换机正忙于传输其他分组，则其需要在输出缓存中等待，其损耗的时长即称为排队时延。由于缓存空间是有限的，所以一个已到达的分组可能发现缓存已经被存满了，此时将出现分组丢失(丢包 packet loss)，已到达的分组或排队的分组之一将被丢弃。</p>
 <h6 id="_2">转发表与路由选择协议</h6>
@@ -1983,9 +1983,10 @@
 <h6 id="_4">分组交换与电路交换的对比</h6>
 <p>电路交换在静默期(silent period)空闲而不够经济。</p>
 <p>总体而言，分组交换更经济。</p>
-<blockquote>
+<div class="admonition note">
+<p class="admonition-title">经济</p>
 <p>从直觉上而言，预定餐位是追求稳妥的行为，但是"经济"方面的对比必须同时考虑"客人"与"店家"。</p>
-</blockquote>
+</div>
 <h5 id="33">3.3 网络的网络</h5>
 <h4 id="4">4 分组交换网中的时延、丢包和吞吐量</h4>
 <h5 id="41">4.1 分组交换网中的时延概叙</h5>
@@ -2042,9 +2043,10 @@ d<sub>end-end</sub> = N*(d<sub>proc</sub> + d<sub>trans</sub> + d<sub>prop</sub>
 <p>应用层协议分布在多个端系统上，而一个端系统上的应用程序与另一个端系统的应用程序使用协议交换信息分组，这些位于应用层的信息分组称为报文(message)。</p>
 <p>2.运输层</p>
 <p>运输层在应用程序端点之间传递报文。因特网中有两种运输协议TCP与UDP。TCP向其上层提供可靠的、包括流量控制与确保传递、面向连接的服务，其也将长报文分为短报文，并提供拥塞控制机制。而UDP则提供不提供不必要服务、不可靠的、没有拥塞与流量控制、无连接的服务。运输层的分组称为报文段(segment)。</p>
-<blockquote>
+<div class="admonition note">
+<p class="admonition-title">可靠</p>
 <p>"可靠"是指报文段从发送端系统到接收端系统时，其内容不会发生改变，且不会丢失。TCP发送ACK(确认应答)来确保报文段到达接收端系统。后续应该会细谈</p>
-</blockquote>
+</div>
 <p>3.网络层</p>
 <p>网络层负责将称为数据报(datagram)的网络层分组从一台主机传输到另一台主机。</p>
 <p>因特网的网络层包含著名的网络协议IP，其定义了在数据报各个字段以及端系统与路由器如何处理这些字段。网络层也包含许多路由选择协议，但通常将其简单称为IP层。</p>
