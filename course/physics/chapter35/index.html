@@ -1,0 +1,2039 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter34/">
+      
+      
+        <link rel="next" href="../chapter38/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+    
+    
+      
+        <title>Chapter35(36)Inductance and Magnetic properties of materials - Dremig</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-35" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Dremig" class="md-header__button md-logo" aria-label="Dremig" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dremig
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter35(36)Inductance and Magnetic properties of materials
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../cs/" class="md-tabs__link">
+        
+  
+    
+  
+  计算机科学与技术
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ai/" class="md-tabs__link">
+        
+  
+    
+  
+  人工智能
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../is/" class="md-tabs__link">
+        
+  
+    
+  
+  信息安全
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../na/introduce/" class="md-tabs__link">
+          
+  
+  课程内容笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../fun/ClashRoyale/" class="md-tabs__link">
+          
+  
+  娱乐
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../friend/" class="md-tabs__link">
+        
+  
+    
+  
+  友链
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Dremig" class="md-nav__button md-logo" aria-label="Dremig" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Dremig
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机科学与技术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    人工智能
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../is/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    信息安全
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    课程内容笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            课程内容笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数值分析
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            数值分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../na/introduce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../na/chapter1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter1：Mathematical Preliminaries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机组成与设计
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成与设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../co/introduce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../co/chapter1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter1：计算机概要与技术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../co/chapter2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter2：计算机的算术运算
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../co/chapter3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter3：指令：计算机的语言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../co/chapter4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter4：处理器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../co/chapter5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter5：内存层次架构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../co/chapter6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter6：存储与IO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    普通物理学II(H)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            普通物理学II(H)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter32/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter32(33) The Steady Magnetic Field
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter34/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter34 Faraday's Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter35(36)Inductance and Magnetic properties of materials
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapter35(36)Inductance and Magnetic properties of materials
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-35" class="md-nav__link">
+    <span class="md-ellipsis">
+      chapter 35
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="chapter 35">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#35-1-inductance" class="md-nav__link">
+    <span class="md-ellipsis">
+      35-1 Inductance (互感)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      35-2 材料的磁性质
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-3-rl" class="md-nav__link">
+    <span class="md-ellipsis">
+      35-3 RL电路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      35-4 电路能量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      35-5 电磁振荡
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter38/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter38 Maxwell Equations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter39/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter39 EMWave and Light waves
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter40/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter40 Geometrical Optics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter41/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter41 Interference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter42/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter42 Diffraction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter43/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter43 Polarization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    高级数据结构与算法分析
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            高级数据结构与算法分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/introduce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson1：AVL树、Splay树与摊还分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson2：红黑树与B+树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson3：倒排索引
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson4：左倾堆与倾斜堆
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson5：二项队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson6：回溯法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson7：分治法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson8：动态规划
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson9：贪心法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson10：NP问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson11：近似算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson12：局部搜索
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson13：随机算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson14：并行算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/lesson15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lesson15：外部排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    娱乐
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            娱乐
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fun/ClashRoyale/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clash Royale
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../friend/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    友链
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-35" class="md-nav__link">
+    <span class="md-ellipsis">
+      chapter 35
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="chapter 35">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#35-1-inductance" class="md-nav__link">
+    <span class="md-ellipsis">
+      35-1 Inductance (互感)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      35-2 材料的磁性质
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-3-rl" class="md-nav__link">
+    <span class="md-ellipsis">
+      35-3 RL电路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      35-4 电路能量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      35-5 电磁振荡
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Chapter35(36)Inductance and Magnetic properties of materials</h1>
+
+<h3 id="chapter-35">chapter 35</h3>
+<h4 id="35-1-inductance">35-1 Inductance (互感)</h4>
+<p>从法拉利电磁感应定律出发，</p>
+<p><img alt="alt text" src="../image.png" /></p>
+<p><span class="arithmatex">\(i_1\)</span> change <span class="arithmatex">\(s_2\)</span> induced emf <span class="arithmatex">\(ε_2\)</span> 
+<span class="arithmatex">\(i_2\)</span> change <span class="arithmatex">\(s_1\)</span> induced emf <span class="arithmatex">\(ε_1\)</span> </p>
+<p>The number of flux linkage (磁通匝链数) in S<sub>2</sub> due to S<sub>1</sub>:
+<span class="arithmatex">\(ψ_{21}(\propto N_1 A_1 B_1) \propto N_1 φ_1 ; ψ_{21} = M_{21} i_2\)</span> </p>
+<p>The number of flux linkage (磁通匝链数) in S<sub>1</sub> due to S<sub>2</sub>:
+<span class="arithmatex">\(ψ_{12}(\propto N_2 A_2 B_2) \propto N_2 φ_2 ; ψ_{12} = M_{12} i_1\)</span> </p>
+<p><span class="arithmatex">\(M_{12} = \frac{ψ_{12}}{i_1}; ε_2 = -\frac{dψ_{12}}{dt} = -M_{12} \frac{di_1}{dt}\)</span>    <span class="arithmatex">\(i_1\)</span>change</p>
+<p><span class="arithmatex">\(M_{21} = \frac{ψ_{21}}{i_2}; ε_1 = -\frac{dψ_{21}}{dt} = -M_{21} \frac{di_2}{dt}\)</span>  <span class="arithmatex">\(i_2\)</span>change</p>
+<p><span class="arithmatex">\(M_{12}, M_{21}\)</span>被叫做inductance constant互感系数</p>
+<p><span class="arithmatex">\(M_{12} = M_{21} = M\)</span></p>
+<p>单位为亨利(H) <span class="arithmatex">\(1 H = 1 Wb / A\)</span></p>
+<p>e.g. Example 1</p>
+<p><span class="arithmatex">\(L = 1m\\ A = 10cm^2 = 10 ^ {-3} m^2\\ N_1 = 1000\\ N_2 = 20\\ \frac{di_1}{dt} = 10A / s\)</span> </p>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<p>Answer:</p>
+<p><span class="arithmatex">\(B = μ_0ni\)</span> <span class="arithmatex">\(B_1 = μ_0 \frac{N_1}{L}i_1\)</span></p>
+<p><span class="arithmatex">\(ψ_{12} = N_2 B_1 A = μ_0\frac{N_1 N_2}{L}Ai_1\)</span></p>
+<p><span class="arithmatex">\(M_{12} = \frac{ψ_{12}}{i_1} = μ_0\frac{N_1 N_2}{L}A = 25μH\)</span></p>
+<p><span class="arithmatex">\(ε_2 = -M_{12} \frac{di_1}{dt} = -250μV\)</span></p>
+<p><img alt="alt text" src="../image-2.png" /></p>
+<p>机场金属探测器工作原理
+1. 脉冲电流与脉冲磁场</p>
+<pre><code>+ 机场金属探测器通过脉冲电流在探测器的线圈中产生脉冲磁场。
+</code></pre>
+<ol>
+<li>
+<p>金属中感应电动势</p>
+<ul>
+<li>脉冲磁场遇到金属物体时，根据法拉第电磁感应定律，金属物体中会感应出电动势。</li>
+</ul>
+</li>
+<li>
+<p>铁磁性金属的响应</p>
+<ul>
+<li>铁磁性金属（如铁、钢）能够“吸引”更多的磁场，因此它们产生的感应电动势更强。</li>
+<li>更强的磁场（B）导致更大的互感（磁场耦合），从而产生更大的感应电动势。
+电动势引发电流</li>
+</ul>
+</li>
+<li>
+<p>感应电动势会在金属物体中引起电流。</p>
+<ul>
+<li>电流的大小和持续时间取决于金属的电阻率：</li>
+<li>电阻率较低的金属（如铜）：电流较大且持续时间较短。</li>
+<li>电阻率较高的金属（如铝）：电流较小且持续时间较长。</li>
+</ul>
+</li>
+<li>
+<p>衰减的电流与磁场</p>
+<ul>
+<li>由于电流通过金属时会受到电阻的影响，产生的电流最终会衰减。</li>
+<li>衰减的电流会产生衰减的磁场，衰减的磁场进一步在接收线圈中感应出电流。</li>
+</ul>
+</li>
+<li>
+<p>信号幅度与持续时间</p>
+<ul>
+<li>金属物体的成分和几何形状决定探测器接收到的信号的幅度和持续时间。<ul>
+<li>较大的金属物体或具有不同形状的金属物体可能会产生不同强度的信号。</li>
+<li>铁磁性金属产生的信号通常比非铁磁性金属更强。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Self-Inductance (自感)</strong></p>
+<p><span class="arithmatex">\(ψ = NBA = Li\)</span></p>
+<p><span class="arithmatex">\(ε_L = -\frac{dψ}{dt} = -L \frac{di}{dt}\)</span></p>
+<p><span class="arithmatex">\(V_b - V_a = -L \frac{di}{dt}\)</span></p>
+<p>总感觉高中应该是上过这些内容，可惜忘得差不多了，再来一遍吧。</p>
+<p><img alt="alt text" src="../image-3.png" /></p>
+<p>对于上面这张图，开关闭合后，就有电流的流动(顺时针)，因而产生纸面向里的磁通量变化。</p>
+<p>随着磁通量增加就会感应出电动势，阻碍电流的增大，感应电动势的方向与电流方向相反，也就是逆时针方向。</p>
+<p>实际上，电流的开启速度是被调节的，以确保回路中感应的电动势与电池电压相平衡。也就是说，感应电动势会调整电流的变化速度，使得总电压（电池电压和感应电动势的合成）恰好为零，从而维持稳定的电流。</p>
+<p>因此我们有<span class="arithmatex">\(V_b - V_a = -\frac{dΦ_b}{dt} \propto -\frac{di}{dt}\)</span></p>
+<p>首先，通电的电流感应出的磁场大小与电流大小成正比，即<span class="arithmatex">\(B \propto i\)</span></p>
+<p>磁通量也就与电流成正比，即<span class="arithmatex">\(Φ = \iint \vec{B} * d\vec{A}  \propto i\)</span></p>
+<p>定义常数自感系数为<span class="arithmatex">\(L = \frac{Φ_b}{i}\)</span>，结合起法拉利电磁感应定律就有<span class="arithmatex">\(ε = -\frac{dΦ_b}{dt} = -\frac{dLi}{dt} = -L\frac{di}{dt}\)</span></p>
+<p>计算自感系数</p>
+<p>e.g. Example 2</p>
+<p><img alt="alt text" src="../image-4.png" /></p>
+<p>横截面积<span class="arithmatex">\(A\)</span>，电流<span class="arithmatex">\(i\)</span>，长度<span class="arithmatex">\(l\)</span>，匝数密度<span class="arithmatex">\(n\)</span></p>
+<p><span class="arithmatex">\(B = μ_0ni\)</span> </p>
+<p><span class="arithmatex">\(ψ = NΦ_B = μ_0n^2ilA\)</span></p>
+<p><span class="arithmatex">\(L = \frac{ψ}{i} = μ_0n^2lA = μ_0n^2V\)</span>，此处的<span class="arithmatex">\(V\)</span>为体积。</p>
+<p><span class="arithmatex">\(L_v = μ_0n^2\)</span> 单位体积的自感系数</p>
+<p><span class="arithmatex">\(L_l = μ_0n^2A\)</span> 单位长度的自感系数</p>
+<p>互感系数等于两个线圈的自感系数之积开根号</p>
+<p><span class="arithmatex">\(M = \sqrt{L_1L_2}\)</span></p>
+<p>直接串联与对偶串联：</p>
+<p><img alt="alt text" src="../image-39.png" /></p>
+<p>对于电容器：</p>
+<p><span class="arithmatex">\(C = K_e C_0\)</span></p>
+<p>对于中间插了磁性材料的螺线管</p>
+<p><span class="arithmatex">\(L = K_m L_0\)</span></p>
+<p>其中<span class="arithmatex">\(K_m\)</span>为互感系数的系数</p>
+<ul>
+<li>顺磁性或抗磁性材料,<span class="arithmatex">\(k_m ≈ 1\)</span></li>
+<li>铁磁性材料 <span class="arithmatex">\(K_m = 10^{3} - 10^{4}\)</span></li>
+</ul>
+<h4 id="35-2">35-2 材料的磁性质</h4>
+<ol>
+<li>
+<p>原子和原子核磁性(看不懂)</p>
+<p><img alt="alt text" src="../image-5.png" /></p>
+<p><span class="arithmatex">\(μ = iA\)</span></p>
+<p><span class="arithmatex">\(i = \frac{e}{T} = \frac{e}{2πr}v\)</span></p>
+<p><span class="arithmatex">\(μ = \frac{ev}{2πr}A = \frac{ev}{2πr}πr^2 = \frac{evr}{2}\)</span></p>
+<p>角动量：<span class="arithmatex">\(l = mvr\)</span></p>
+<p>因此<span class="arithmatex">\(\vec{μ_L} = -\frac{e}{2m} \vec{l}\)</span>注意方向不同</p>
+<p>其中<span class="arithmatex">\(\vec{μ_L}\)</span>为整个原子的磁矩，<span class="arithmatex">\(\vec{L}\)</span>为所有电子的总角动量。</p>
+<p><img alt="alt text" src="../image-40.png" /></p>
+<p>那个h带箭头的符号是约化普朗克常数，等于<span class="arithmatex">\(\frac{h}{2π}\)</span>。</p>
+<table>
+<thead>
+<tr>
+<th>Particle</th>
+<th>Spin</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Electron(电子)</strong></td>
+<td><span class="arithmatex">\( s = \frac{1}{2} \hbar \)</span></td>
+<td>Fermi</td>
+</tr>
+<tr>
+<td><strong>Proton(质子)</strong></td>
+<td><span class="arithmatex">\( s = \frac{1}{2} \hbar \)</span></td>
+<td>Fermi</td>
+</tr>
+<tr>
+<td><strong>Neutron(中子)</strong></td>
+<td><span class="arithmatex">\( s = \frac{1}{2} \hbar \)</span></td>
+<td>Fermi</td>
+</tr>
+<tr>
+<td><strong>Deuteron(氘核)</strong></td>
+<td><span class="arithmatex">\( s = \hbar \)</span></td>
+<td>Bose</td>
+</tr>
+<tr>
+<td><strong>Alpha Particle(氦-4核)</strong></td>
+<td><span class="arithmatex">\( s = 0 \)</span></td>
+<td>Bose</td>
+</tr>
+</tbody>
+</table>
+<p>原子核的磁性对于原子，或者说材料的磁性而言，都是可以忽略不计的。</p>
+</li>
+<li>
+<p>磁化强度</p>
+<p>宏观结果来看：<span class="arithmatex">\(\vec{B} = \vec{B_0} + \vec{B_M'}\)</span></p>
+<p>定义磁化强度：<span class="arithmatex">\(\vec{M} = \frac{\sum \vec{μ}}{\triangle V}\)</span>为单位体积内磁矩的矢量和。</p>
+<p>因此，<span class="arithmatex">\(∮\vec{M} d\vec{l} = \sum i_{bound}\)</span></p>
+<p><span class="arithmatex">\(i_{bound}\)</span>被称为束缚电流，是由磁化强度的变化产生的。</p>
+<p>均匀磁化：</p>
+<p><img alt="alt text" src="../image-41.png" /></p>
+<p><img alt="alt text" src="../image-42.png" /></p>
+<p>这是如何得到的？非常精妙的思路：</p>
+<p><span class="arithmatex">\(j' = \frac{i'}{\triangle z}\)</span>就是电流密度，因为相当于老师画的很多电流元，它们的电流乘面积最后等效为了束缚电流乘整块面积。</p>
+<p>同理，对于非均匀磁化，就是一个积分思想：</p>
+<p><img alt="alt text" src="../image-43.png" /></p>
+<p>这里面不只有表电流，还有体电流，也仍然成立。</p>
+</li>
+<li>
+<p>磁场强度</p>
+<p>B叫做磁感应强度。</p>
+<p><img alt="alt text" src="../image-44.png" /></p>
+<p>新安培环路定律：</p>
+<p><img alt="alt text" src="../image-45.png" /></p>
+<p>真空中，<span class="arithmatex">\(\vec{B} = \mu_0\vec{H}\)</span>，因为<span class="arithmatex">\(M\)</span>为0.</p>
+<p><img alt="alt text" src="../image-46.png" /></p>
+<p><img alt="alt text" src="../image-50.png" /></p>
+<ol>
+<li>
+<p>顺磁材料</p>
+<p>前提：<span class="arithmatex">\(\vec{u_m}!=0\)</span></p>
+<p><img alt="alt text" src="../image-47.png" /></p>
+</li>
+<li>
+<p>抗磁材料</p>
+<p><img alt="alt text" src="../image-48.png" /></p>
+<p><img alt="alt text" src="../image-51.png" /></p>
+<p>不管你给电子加速还是减速，都会产生一个反向的<span class="arithmatex">\(\triangle u\)</span>，这样就形成了对抗。</p>
+</li>
+<li>
+<p>铁磁材料</p>
+<p><img alt="alt text" src="../image-49.png" /></p>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="35-3-rl">35-3 RL电路</h4>
+<ol>
+<li>
+<p>RC电路</p>
+<p><img alt="alt text" src="../image-52.png" /></p>
+<p><img alt="alt text" src="../image-53.png" /></p>
+<p>注意有所谓的<span class="arithmatex">\(C'\)</span>，而如何计算这个<span class="arithmatex">\(C'\)</span>？取t=0，最开始电容器上不是没有电荷吗？所以<span class="arithmatex">\(q=0\)</span>，也就是<span class="arithmatex">\(C' = -C\epsilon\)</span>。</p>
+</li>
+<li>
+<p>RL电路</p>
+<p><img alt="alt text" src="../image-58.png" /></p>
+<p>开关拨到a：</p>
+<p><img alt="alt text" src="../image-57.png" /></p>
+<p>类似的结果，就是把电容器改成了自感的材料。</p>
+<p>因此关于电动势的方程就从<span class="arithmatex">\(\frac{q}{C}\)</span>改为了<span class="arithmatex">\(\frac{Ldi}{dt}\)</span>也就是自感电动势。</p>
+<p>积分还是类似的过程，而<span class="arithmatex">\(C'\)</span>常数在t=0的时候也就是<span class="arithmatex">\(-\frac{\epsilon}{R}\)</span>，因为一开始没有电流。</p>
+<p>我们定义一个时间常数<span class="arithmatex">\(τ = \frac{L}{R}\)</span>实现简化。</p>
+<p><img alt="alt text" src="../image-55.png" /></p>
+<p><span class="arithmatex">\(V_L\)</span>指的是自感电动势。</p>
+<p><img alt="alt text" src="../image-56.png" /></p>
+<p>图像：</p>
+<p><img alt="alt text" src="../image-59.png" /></p>
+<p>开关拨到b，其实变化率也就是所谓的时间常数都是不变的</p>
+<p><img alt="alt text" src="../image-74.png" /></p>
+</li>
+</ol>
+<h4 id="35-4">35-4 电路能量</h4>
+<p><img alt="alt text" src="../image-75.png" /></p>
+<p>核心是要理解<span class="arithmatex">\(dW = -\epsilon_Ldq\)</span>，相当于克服自感电动势移动单位电荷，那么<span class="arithmatex">\(dW = -\epsilon_Ldit = -\epsilon_Lidt = Lidi\)</span></p>
+<p>所以<span class="arithmatex">\(W = \int_{0}^{i_{max}} Lidi = \frac{1}{2}Li_{max}^2\)</span></p>
+<p>做的功储藏在自感线圈的磁场里。</p>
+<p><span class="arithmatex">\(L = u_0n^2lA = u_0n^2V\)</span></p>
+<p><span class="arithmatex">\(B = u_0nI\)</span></p>
+<p>所以能量密度<span class="arithmatex">\(u_B = \frac{W}{V} = \frac{u_0n^2I^2V}{2V} = \frac{u_0n^2I^2}{2} = \frac{B^2}{2u_0}\)</span></p>
+<h4 id="35-5">35-5 电磁振荡</h4>
+<p>与弹性势能与动能的转换是类似的。</p>
+<p><img alt="alt text" src="../image-76.png" /></p>
+<p><img alt="alt text" src="../image-77.png" /></p>
+<p>主要是要理解为什么取<span class="arithmatex">\(dU/dt = 0\)</span>的点，因为<strong>在一个理想LC电路中，不存在能量损耗</strong>。</p>
+<p>那么这个讨论了之后就很简单了，轻松算的<span class="arithmatex">\(q = q_mcos(wt+\phi),w = \sqrt{\frac{1}{LC}}\)</span></p>
+<p>阻尼和受拍振动：</p>
+<p><img alt="alt text" src="../image-78.png" /></p>
+<p>这里的思路就是假设<span class="arithmatex">\(q = Ae^{\lambda t}\)</span>然后代入计算，实际就是一个一元二次方程。</p>
+<p>很妙的是这里最后加了个<span class="arithmatex">\(C\epsilon\)</span>，好吧就应该这么做。</p>
+<ol>
+<li>过阻尼
+    电阻过大，两个解，也就是什么<span class="arithmatex">\(b^2-4ac&gt;0\)</span>
+    <img alt="alt text" src="../image-125.png" /></li>
+<li>临界阻尼态
+    一个解。
+    <img alt="alt text" src="../image-126.png" />
+    注意看这个函数退化了已经(笑)。</li>
+<li>阻尼振荡
+    虚数解，出现阻尼振荡，但是振幅逐步衰减。
+    <img alt="alt text" src="../image-79.png" /></li>
+</ol>
+<p>电源改成一个交流电：出现受拍振动。</p>
+<p><img alt="alt text" src="../image-80.png" /></p>
+<p>其本质就是共振，这和上学期上的挺像。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/diagram-definition.0faef4c2.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/markdown-it-plantuml@1.4.1/index.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml-full.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg-full.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
