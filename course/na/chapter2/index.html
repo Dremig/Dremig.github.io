@@ -617,10 +617,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.2 Fixed-Point Iteration(不动点迭代)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#23-newtons-method" class="md-nav__link">
     <span class="md-ellipsis">
       2.3 Newton's Method
@@ -628,18 +627,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#24-error-analysis-for-iterative-methods" class="md-nav__link">
     <span class="md-ellipsis">
       2.4 Error Analysis for Iterative Methods
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1644,10 +1638,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.2 Fixed-Point Iteration(不动点迭代)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#23-newtons-method" class="md-nav__link">
     <span class="md-ellipsis">
       2.3 Newton's Method
@@ -1655,18 +1648,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#24-error-analysis-for-iterative-methods" class="md-nav__link">
     <span class="md-ellipsis">
       2.4 Error Analysis for Iterative Methods
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1703,7 +1691,7 @@
 <p>我们简单的观察发现可能与函数的导数有关系(也就是陡峭还是平缓的)</p>
 <p>不动点定理：总之就是要满足存在一个常数<span class="arithmatex">\(0&lt; k &lt;1\)</span>使得<span class="arithmatex">\(|g'(x)| &lt;= k\)</span>，同时注意前置条件的定义域与值域。</p>
 <p>然后显然就是收敛速度的问题，收敛速度取决于<span class="arithmatex">\(k\)</span>的大小，越小越好。</p>
-<h4 id="23-newtons-method">2.3 Newton's Method</h4>
+<h3 id="23-newtons-method">2.3 Newton's Method</h3>
 <p>基本思路:使用泰勒展开<strong>线性化</strong>一个非线性方程。</p>
 <p><span class="arithmatex">\(p_0\)</span>是一个初始值且保证<span class="arithmatex">\(f(p_0) = 0\)</span>，那么对于我们实际想得到的值是有<span class="arithmatex">\(p_0\)</span>的泰勒展开的，我们的想法就是泰勒展开来近似根<span class="arithmatex">\(p\)</span></p>
 <p><img alt="alt text" src="../image-34.png" /></p>
@@ -1717,7 +1705,7 @@
 <p><img alt="alt text" src="../image-37.png" /></p>
 <p>深刻利用了<span class="arithmatex">\(p\)</span>点的局部性，因为这个区间很小，对于我们<span class="arithmatex">\(0&lt; k&lt; 1\)</span>的证明就是认为总是能在这个区间里找到满足条件的<span class="arithmatex">\(k\)</span>。</p>
 <p>如果我们初值设太远了那就不能"map to itself"。</p>
-<h4 id="24-error-analysis-for-iterative-methods">2.4 Error Analysis for Iterative Methods</h4>
+<h3 id="24-error-analysis-for-iterative-methods">2.4 Error Analysis for Iterative Methods</h3>
 <p>对迭代方法的误差分析，如何度量。</p>
 <p>假设我们利用迭代法算出了一个迭代法收敛于根<span class="arithmatex">\(p\)</span>，定义<span class="arithmatex">\(\lim_{n-&gt;∞}\frac{|p_{n+1}-p|}{|p_n-p|^\alpha} = \lambda\)</span>得到了常数<span class="arithmatex">\(\alpha\)</span>与<span class="arithmatex">\(\lambda\)</span>，我们可以注意到<span class="arithmatex">\(\alpha\)</span>越大收敛越快。同时<span class="arithmatex">\(\lambda\)</span>越小，同样的阶数，收敛速度更快。</p>
 <p><img alt="alt text" src="../image-38.png" /></p>
