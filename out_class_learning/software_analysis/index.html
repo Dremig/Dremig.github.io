@@ -303,6 +303,24 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../diary/2025.2.1/" class="md-tabs__link">
+          
+  
+  日记
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     <li class="md-tabs__item">
       <a href="../../friend/" class="md-tabs__link">
         
@@ -1836,6 +1854,72 @@
   
   
   
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    日记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            日记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diary/2025.2.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    [Protected] 2025.2.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../friend/" class="md-nav__link">
         
@@ -1946,8 +2030,86 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4
+    </span>
+  </a>
   
 </li>
       
@@ -2035,6 +2197,232 @@
 <p>Intermediate Representation(IR):中间表示。</p>
 <p>我们认为利于静态分析的IR是简便的，且能够表示程序的所有行为。</p>
 <h4 id="21">2.1</h4>
+<p>编译器的一个流程。</p>
+<p>第一步骤：词法分析(Lexical Analysis)，将源代码转化为Tokens(使用正则表达式regular expression)。就拿英文举例子，<code>You are a man</code>就会被转换为4个合法的tokens，而<code>You goouojd</code>由于并不能组成合法的单词，因此就无法通过词法分析。</p>
+<p>第二步骤：语法分析(Syntax Analysis)，将Tokens转化为AST(抽象语法树)(使用上下文无关文法 context-free grammar)。比如<code>I am clever</code>就能通过，那比如<code>Like your hair I</code>不符合语法规则，也就不通过。</p>
+<p>第三步骤：语义分析(Semantic Analysis)，将AST转化为decorated AST(使用arribute grammar)。比如<code>Apples eat you</code>就不通过语义分析。</p>
+<p>第四步骤：IR生成，将decorated AST转化为IR。</p>
+<p>第五步骤：机器码转换，将IR转化为机器码。</p>
+<p><img alt="alt text" src="../image-10.png" /></p>
+<p>显然是不会直接跳过前面合法性的检查来直接转换为IR的，因为如果前面基本的都通不过，那还要交给错误检测吗？</p>
+<h4 id="22">2.2</h4>
+<p>AST vs IR</p>
+<p><img alt="alt text" src="../image-11.png" /></p>
+<p>AST:</p>
+<ul>
+<li>high-level，接近源代码的</li>
+<li>与上一条相对应的，依赖于不同的语言</li>
+<li>利于快速类型检测</li>
+<li>看不出控制流的信息</li>
+</ul>
+<p>IR:</p>
+<ul>
+<li>low-level，接近机器码的</li>
+<li>
+<p>与上一条对应，与语言依赖性不高(语言无关的)</p>
+<ul>
+<li>由于这一性质，IR成为静态分析的重头戏 </li>
+<li>较简洁</li>
+<li>看得出控制流的信息</li>
+</ul>
+</li>
+</ul>
+<h4 id="23">2.3</h4>
+<p>e.g. </p>
+<p><code>a + b + 3</code></p>
+<p>→</p>
+<pre><code>t1 = a + b 
+t2 = t1 + 3
+</code></pre>
+<p>三地址码(3-Address Code 3AC)：</p>
+<ul>
+<li>在一个操作中，右侧最多只有一个操作符</li>
+<li>每个3AC最多含有3个地址</li>
+</ul>
+<p>这个"地址"定义比较不一样，可以是：</p>
+<ul>
+<li>name:<code>a,b</code></li>
+<li>constant:<code>3</code></li>
+<li>compiler-generated temporary:<code>t1,t2</code></li>
+</ul>
+<p>每一个操作都有其三地址码。</p>
+<p>我们使用soot作为该课程的IR，soot's IR is Jimple.</p>
+<ul>
+<li>
+<p>for循环(Loop)</p>
+<p><code>// Java Src
+    package nju.sa.examples;
+    public class ForLoop3AC{
+        public static void main(String[] args){
+            int x = 0;
+            for(int i = 0;i &lt; 10;i+++){
+                x = x + 1;
+            }
+        }
+    }</code></p>
+<p><code>java
+// 3AC(jimple)
+public static void main(java.lang.String[])
+{
+    java.lang.String[] r0;
+    int i1;
+    r0:= @parameter0: java.lang.String[];
+    i1 = 0;
+ label1:
+    if i1 &gt;= 10 goto label2;
+    i1 = i1 + 1;
+    goto label1;
+ label2:
+    return;
+}</code></p>
+</li>
+<li>
+<p>Do-While循环</p>
+<p><code>java
+// Java Src
+package nju.sa.examples;
+public class DoWhileLoop3AC{
+    public static void main(String[] args){
+        int[] arr = new int[10];
+        int i = 0;
+        do{
+            i = i + 1;
+        }while(arr[i] &lt; 10);
+    }
+}</code></p>
+<p><code>java
+// 3AC(jimple)
+public static void main(java.lang.String[])
+{
+    java.lang.String[] r0;
+    int[] r1;
+    int i1;
+    r0:= @parameter0: java.lang.String[];
+    r1 = newarray (int)[10];
+    i1 = 0;
+ label1:
+    i1 = i1 + 1;
+    $i0 = r1[i1];
+    if $i0 &gt;= 10 goto label1;
+    return;
+}</code></p>
+</li>
+<li>
+<p>Method call</p>
+<p>```java
+    package nju.sa.examples;
+    public class MethodCall3AC{
+        String foo(String para1, String para2){
+            return para1 + " " + para2;
+        }</p>
+<pre><code>    public static void main(String[] args){
+        MethodCall3AC mc = new MethodCall3AC();
+        String s = mc.foo("hello", "world");
+    }
+}
+</code></pre>
+<p>```</p>
+<p><img alt="alt text" src="../image-12.png" /></p>
+<p><img alt="alt text" src="../image-13.png" /></p>
+<ul>
+<li>invokespecial: 调用构造函数、私有方法、superclass methods</li>
+<li>invokesvirtual: 调用实例方法</li>
+<li>invokeinterface: 不能优化，检查接口实现</li>
+<li>invokestatic: 调用静态方法</li>
+</ul>
+<p><del>啊卧槽这一块怎么这么难</del></p>
+<p>method signature: class name: return type method name(parameter1 type, parameter2 type, ...)</p>
+</li>
+<li>
+<p>class</p>
+<p><img alt="alt text" src="../image-14.png" /></p>
+<p>init方法是默认生成的<code>pi</code>对应的构造函数，clinit是用于初始化所有静态变量值。</p>
+</li>
+</ul>
+<h4 id="24">2.4</h4>
+<p>Static Single Assignment(SSA)</p>
+<p>很好理解，就是每个变量只被赋值一次，比方说p、q这两个变量，它们会分出p<sub>1</sub>、p<sub>2</sub>、q<sub>1</sub>、q<sub>2</sub>...来表示同一个变量的不同状态。</p>
+<p><img alt="alt text" src="../image-15.png" /></p>
+<p>但是这里，我们说每一个变量只被赋值一次，我们重新用其他变量名来表示不同状态。</p>
+<p>为了避免歧义，SSA引入了"phi-function"<span class="arithmatex">\(\phi\)</span>以应对控制流的交界处合并。</p>
+<p><img alt="alt text" src="../image-16.png" /></p>
+<h4 id="25">2.5</h4>
+<p>Control Flow Analysis：我们如何建立Control Flow Graph(CFG)？</p>
+<p>CFG给予静态分析的基本结构，它的每一个节点可以是单独的3AC，也可以是多个3AC组成的Basic Block(BB)。</p>
+<p>Basic Block(BB): 满足下列性质的最多的连续3AC序列。</p>
+<ul>
+<li>只有一个入口，且为第一条指令</li>
+<li>只有一个出口，且为最后一条指令</li>
+</ul>
+<p><img alt="alt text" src="../image-17.png" /></p>
+<p>ok这里老师引导我们思考如何从3AC序列转换至BBs，我的思路就是贪心捕捉，第一条指令肯定就是第一个BB的开头，每一个BB持续拿指令，直到要么有第二个入口或者出现第二个出口我们就结束。来我们看看老师怎么说。</p>
+<p>哦老师说的大差不差，就是第二个入口会是什么？无非就是其他指令跳转到的地方嘛，同理第二个出口就只会是要跳转到其他地方的指令。</p>
+<p><img alt="alt text" src="../image-18.png" /></p>
+<p>leader是什么？很好理解的，跳转指令的下一条指令与其跳转到的地方就是所有的leader，当然整个3AC的总开头和总结尾也都是。</p>
+<p>那么CFG的绘制就很简单了，BB到BB有边当且仅当：</p>
+<ul>
+<li>BB1到BB2有有/无条件的跳转</li>
+<li>BB2紧跟BB1，且BB1没有有/无条件跳转</li>
+</ul>
+<p>BB1是BB2的前驱(predecessor)，BB2是BB1的后继(successor)。</p>
+<p>还有两个特殊节点Entry与Exit，Entry是所有BB的前驱，Exit是所有BB的后继，但它们并不是可执行的IR。</p>
+<h3 id="3">3</h3>
+<p>Data Flow Analysis -- Applications</p>
+<p>how applicaton-specific Data Flows through the :</p>
+<ul>
+<li>Nodes(BBs/statements)：transfer function </li>
+<li>Edges(control flow)：control-flow handling</li>
+<li>CFG(a program)</li>
+</ul>
+<p>回顾一下判断数字正负的例子，这里不具体说了。</p>
+<p><img alt="alt text" src="../image-19.png" /></p>
+<p>may analysis:最常见的静态分析，输出可能是正确的(over-approximation)</p>
+<p>must analysis: 输出一定是正确的(under-approximation)</p>
+<p>不论是may还是must analysis，其目的都是保证分析的safety。</p>
+<h4 id="31">3.1</h4>
+<p>一个基本知识的概览。</p>
+<p>Input and Output States:</p>
+<ul>
+<li>每一个IR statement的执行意味着从一个input状态转为output状态</li>
+<li>input状态与program point before(after) the statement相关</li>
+</ul>
+<p><img alt="alt text" src="../image-20.png" /></p>
+<p>注意这个<code>^</code>符号表示归于。</p>
+<p>domain就是所有的可能抽象值的集合。</p>
+<p>因此我们对数据流分析给出一个定义：</p>
+<p><img alt="alt text" src="../image-21.png" /></p>
+<p>我们最常见的transfer function是forward analysis，<span class="arithmatex">\(OUT[s] = f_s(IN[s])\)</span>，反过来的backward analysis，<span class="arithmatex">\(IN[s] = f_s(OUT[s])\)</span>。</p>
+<p>然后讨论控制流，有两种：</p>
+<ul>
+<li>BB内部的，这显而易见是<span class="arithmatex">\(IN[s_{i+1}] = OUT[s_i]\)</span></li>
+<li>BB之间的，这就要看BB之间的跳转了。明确:<span class="arithmatex">\(IN[B] = IN[s_1]\)</span>和<span class="arithmatex">\(OUT[B] = OUT[s_n]\)</span>，并且<span class="arithmatex">\(OUT[B] = f_B(IN[B]) \ \ f_B = f_{s_n} * ... * f_{s_1}\)</span>和<span class="arithmatex">\(IN[B] = \cap P_{\ \ P \ a  \ predecessors}\)</span>。</li>
+</ul>
+<h4 id="32">3.2</h4>
+<p>Reaching Definition:</p>
+<p>A definition <span class="arithmatex">\(d\)</span> of a variable <span class="arithmatex">\(v\)</span> is said to reach a program point <span class="arithmatex">\(p\)</span> if there is a path from the entry of the procedure to <span class="arithmatex">\(p\)</span> such that <span class="arithmatex">\(d\)</span> is not killed along that path.</p>
+<p>我们不妨翻译一下它，非常简单，就是说p reach q路径上如果没有新的定义(kill)。</p>
+<p>这是可以用来检测的，比如对于变量初始化的检测，在程序入口增设循环定义，那如果一个变量<span class="arithmatex">\(v\)</span>reach a point <span class="arithmatex">\(p\)</span> where <span class="arithmatex">\(v\)</span> is used，那么这个变量可能没被初始化。</p>
+<p>这是一个<strong>May Analysis</strong>，老师的解释是，我们可能有成千上万条路径，每个可能被kill，也可能不，但是只要发现了一条kill就报错。</p>
+<p>也许很不好理解，我们这里举个例子：</p>
+<p><img alt="alt text" src="../image-22.png" /></p>
+<p>就是所有对于变量的定义，那么我们就可以定义transfer function了，这是所有此类分析的基础。</p>
+<p><img alt="alt text" src="../image-23.png" /></p>
+<p><img alt="alt text" src="../image-25.png" /></p>
+<p>其中<code>gen</code>表示在此BB中定义的变量的标号，<code>kill</code>表示在此BB中定义的变量在其他地方(即被kill)的标号。</p>
+<p>control flow就简单了，简单拿所有定义就可以。</p>
+<p><img alt="alt text" src="../image-24.png" /></p>
+<p>老师提出了一个问题，这个迭代过程会结束吗？</p>
+<p>答案是会的。你看表达式<span class="arithmatex">\(OUT[B] = gen_B \cup (IN[B] - kill_B)\)</span>，那么<span class="arithmatex">\(OUT[B]\)</span>是不会减少的，所以这个迭代过程会结束。</p>
+<p><img alt="alt text" src="../image-26.png" /></p>
+<h3 id="4">4</h3>
+<p>Live Variable Analysis：Live variables analysis tells whether the value of veariable v at program point p could be used along some path in CFG starting at p.If so , v is said to be live at p;otherwise, v is said to be dead at p.</p>
+<p><img alt="alt text" src="../image-27.png" /></p>
+<p>就是一条路径上被使用且没有被重定义。</p>
+<p>举个例子，寄存器的分配，假设一个情景，寄存器全满了但是我们想要用一个来存取值，我们最好使用the register with a dead value.</p>
+<p><img alt="alt text" src="../image-28.png" /></p>
+<p>类似的抽象方式，之前是针对"definition"，现在针对"variable"。</p>
+<p>老师提到使用backward analysis，因为这样可以自动向上传是否被use的信息，而不用像forward analysis那样每向下一个要与上一个关联。</p>
+<p>与reaching definition类似，这是一个may analysis。</p>
 
 
 
