@@ -1,0 +1,1 @@
+int globalx = 0;
